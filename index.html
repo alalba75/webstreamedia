@@ -14,153 +14,67 @@
       color: #eaeaf0;
       line-height: 1.6;
     }
+
     header {
       padding: 24px;
       border-bottom: 1px solid #1e2233;
     }
+
     nav {
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 18px;
     }
-    nav a {
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 72px;
+      width: auto;
+      display: block;
+    }
+
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
       color: #bfc4ff;
       text-decoration: none;
-      margin-left: 16px;
       font-size: 15px;
     }
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
     }
-.logo img {
-  height: 72px;
-  width: auto;
-  display: block;
-}
 
-    }
     main {
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
       padding: 80px 24px;
     }
+
     h1 {
       font-size: clamp(34px, 5vw, 56px);
       line-height: 1.1;
       margin-bottom: 20px;
     }
+
     p {
       max-width: 720px;
       color: #b7bbd8;
       font-size: 18px;
     }
+
     .buttons {
       margin-top: 32px;
       display: flex;
       gap: 16px;
-      flex-wrap: wrap;
-    }
-    .button {
-      padding: 14px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      border: 1px solid #2a2f4a;
-      color: #ffffff;
-    }
-    .button.primary {
-      background: linear-gradient(90deg, #7c5cff, #5fa8ff);
-      border: none;
-    }
-    .button:hover {
-      opacity: 0.85;
-    }
-    section {
-      margin-top: 100px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .card {
-      padding: 24px;
-      background: #121624;
-      border: 1px solid #1e2233;
-      border-radius: 18px;
-    }
-    footer {
-      border-top: 1px solid #1e2233;
-      padding: 40px 24px;
-      text-align: center;
-      color: #8b90b8;
-      font-size: 14px;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <nav>
-<div class="logo">
-  <a href="index.html">
-    <img src="assets/logo.png" alt="Webstreamedia logo">
-  </a>
-</div>
-
-
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <h1>Independent film & TV production<br>for character-led stories</h1>
-
-  <p>
-    Webstreamedia is a Brisbane based independent film and television production company working across
-    development, production, and post. We create original and commissioned content for
-    broadcast, streaming, and digital platforms.
-  </p>
-
-  <div class="buttons">
-    <a class="button primary" href="work.html">View selected work</a>
-    <a class="button" href="contact.html">Get in touch</a>
-  </div>
-
-  <section>
-    <h2>What we do</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Film & Television</h3>
-        <p>Independent films, documentaries, factual series, and original TV formats.</p>
-      </div>
-      <div class="card">
-        <h3>Branded & Digital</h3>
-        <p>Cinematic branded content and digital storytelling designed to travel.</p>
-      </div>
-      <div class="card">
-        <h3>End-to-End Production</h3>
-        <p>From concept and pitch through to delivery — lean crews and strong post.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © <span id="year"></span> Webstreamedia
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>

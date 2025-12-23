@@ -136,3 +136,18 @@ footer{
   height: 100%;
   border: 0;
 }
+
+.footer-logos {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 36px;        /* adjust once here */
+  width: auto;
+  opacity: 0.9;
+}

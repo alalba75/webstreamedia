@@ -4,44 +4,27 @@
   <meta charset="utf-8">
   <title>Contact — Webstreamedia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact Webstreamedia — independent film and TV production.">
+  <meta name="description" content="Contact Webstreamedia — independent film and television production.">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Small, safe form styling (keeps it clean + readable) -->
-  <style>
-    label { display:block; margin:14px 0 6px; color:#b7bbd8; font-size:14px; }
-    input, select, textarea {
-      width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid #2a2f4a;
-      background: rgba(255,255,255,0.03);
-      color:#eaeaf0;
-      font: inherit;
-      outline:none;
-    }
-    input:focus, select:focus, textarea:focus {
-      border-color: rgba(124,92,255,0.9);
-      box-shadow: 0 0 0 4px rgba(124,92,255,0.15);
-    }
-    textarea { min-height: 140px; resize: vertical; }
-    .hint { color:#8b90b8; font-size:13px; margin:8px 0 0; }
-    .two-col { display:grid; gap:14px; grid-template-columns: 1fr 1fr; }
-    @media (max-width: 860px){ .two-col{ grid-template-columns:1fr; } }
-    .sr-only { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
-    .actions { margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-  </style>
 </head>
 
 <body>
 <header>
-<div class="nav-links">
-  <a href="work.html">Work</a>
-  <a href="credits.html">Credits</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</div>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Webstreamedia logo">
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="credits.html">Credits</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 </header>
 
 <main>
@@ -53,98 +36,81 @@
   </p>
 
   <section>
-    <div class="grid">
-      <!-- Form card -->
+    <div class="grid" style="grid-template-columns: 1.1fr 0.9fr;">
+
+      <!-- FORM -->
       <div class="card">
-        <h2 style="margin-top:0;">Send a message</h2>
+        <h2>Send a message</h2>
 
         <form
           action="https://formspree.io/f/mpqadowr"
           method="POST"
         >
-          <!-- Redirect to thank-you page after submit -->
-          <input type="hidden" name="_next" value="thanks.html">
+          <!-- spam protection -->
+          <input type="text" name="_gotcha" style="display:none">
 
-          <!-- Optional: cleaner email subject in your inbox -->
-          <input type="hidden" name="_subject" value="New enquiry — Webstreamedia">
+          <p>
+            <label for="name">Name</label><br>
+            <input id="name" name="name" required>
+          </p>
 
-          <!-- Spam protection: honeypot field (bots fill it, humans won't) -->
-          <label class="sr-only" for="company">Company</label>
-          <input class="sr-only" id="company" name="company" tabindex="-1" autocomplete="off">
+          <p>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email" required>
+          </p>
 
-          <!-- Spam protection: hidden “gotcha” (some bots submit all fields) -->
-          <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off">
+          <p>
+            <label for="project">Project type</label><br>
+            <input id="project" name="project" placeholder="Film / TV / Documentary / Branded">
+          </p>
 
-          <div class="two-col">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" autocomplete="name" required>
-            </div>
+          <p>
+            <label for="message">Message</label><br>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Brief outline, timeline, budget range (if applicable), and any relevant links."
+            ></textarea>
+          </p>
 
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-          </div>
+          <!-- redirect after submit -->
+          <input type="hidden" name="_redirect" value="/thanks.html">
 
-          <div class="two-col">
-            <div>
-              <label for="type">Project type</label>
-              <select id="type" name="project_type" required>
-                <option value="" selected disabled>Select…</option>
-                <option>Film</option>
-                <option>TV series</option>
-                <option>Documentary</option>
-                <option>Branded / Commercial</option>
-                <option>Development / Pitch</option>
-                <option>Other</option>
-              </select>
-            </div>
+          <p>
+            <button class="button primary" type="submit">Send message</button>
+          </p>
 
-            <div>
-              <label for="timeline">Timeline</label>
-              <input id="timeline" name="timeline" placeholder="e.g., Feb shoot / Q2 delivery" required>
-            </div>
-          </div>
-
-          <label for="budget">Budget range (optional)</label>
-          <input id="budget" name="budget" placeholder="e.g., Under $10k / $10–30k / $30–80k / $80k+">
-
-          <label for="links">Links (optional)</label>
-          <input id="links" name="links" placeholder="Deck, script, treatment, showreel, refs">
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="What are you making, what do you need, and what does success look like?"></textarea>
-
-          <div class="actions">
-            <button class="button primary" type="submit">Send enquiry</button>
-            <span class="hint">You’ll receive a reply at your email address.</span>
-          </div>
-
-          <p class="hint">
-            By submitting, you confirm you’re contacting Webstreamedia about a genuine project enquiry.
+          <p style="font-size:14px;color:#b7bbd8;margin:0;">
+            Messages are delivered securely via Formspree.
           </p>
         </form>
       </div>
 
-      <!-- Details card -->
+      <!-- DETAILS -->
       <div class="card">
-        <h2 style="margin-top:0;">Direct</h2>
-        <p style="color:#b7bbd8; font-size:18px; margin-top:0;">
-          <strong>Email:</strong> <a href="mailto:admin@webstreamedia.com">admin@webstreamedia.com</a><br>
-          <strong>Based:</strong> Brisbane, Australia<br>
-          <strong>Availability:</strong> By enquiry
+        <h2>Details</h2>
+
+        <p style="color:#b7bbd8;font-size:18px;">
+          <strong>Email</strong><br>
+          admin@webstreamedia.com.au
+        </p>
+
+        <p style="color:#b7bbd8;font-size:18px;">
+          <strong>Based</strong><br>
+          Brisbane, Australia
         </p>
 
         <p style="color:#b7bbd8;">
-          Prefer a quick intro call? Send a brief and a time window.
+          Available for national and international projects.
         </p>
 
         <div class="buttons">
-          <a class="button" href="work.html">View work</a>
-          <a class="button" href="about.html">About</a>
+          <a class="button" href="work.html">View selected work</a>
+          <a class="button" href="credits.html">Credits</a>
         </div>
       </div>
+
     </div>
   </section>
 </main>

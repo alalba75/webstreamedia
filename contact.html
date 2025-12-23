@@ -106,6 +106,7 @@
 </main>
 
 <footer>
+<footer>
   © <span id="year"></span> Webstreamedia
 
   <div class="footer-logos">
@@ -113,6 +114,11 @@
     <img src="assets/smpte.jpg" alt="SMPTE">
     <img src="assets/dante.png" alt="Dante">
   </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </footer>
 
 <script>

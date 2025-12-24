@@ -117,18 +117,28 @@
 </main>
 
 <footer>
-© <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+  © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
 
   <div class="footer-logos">
     <img src="assets/aacta.png" alt="AACTA">
     <img src="assets/smpte.jpg" alt="SMPTE">
     <img src="assets/dante2.png" alt="Dante">
   </div>
-
+</footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-</footer>
+
+  // Light anti-bot friction: disable submit briefly.
+  (function () {
+    const form = document.querySelector("form");
+    if (!form) return;
+    const btn = form.querySelector("button[type='submit']");
+    if (!btn) return;
+    btn.disabled = true;
+    setTimeout(() => { btn.disabled = false; }, 1200);
+  })();
+</script>
   
   // Light anti-bot friction: disable submit briefly.
   (function () {

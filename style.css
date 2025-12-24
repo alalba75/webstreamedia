@@ -151,3 +151,10 @@ footer{
   width: auto;
   opacity: 0.9;
 }
+
+.footer-brand {
+  color: #ff3b3b;
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
+}

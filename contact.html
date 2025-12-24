@@ -7,9 +7,19 @@
   <meta name="description" content="Contact Webstreamedia for film, television, documentary and branded content production enquiries. Based in Australia, working internationally.">
   <link rel="canonical" href="https://webstreamedia.com.au/contact.html">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Webstreamedia">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Webstreamedia | Film & TV Production Enquiries">
+  <meta property="og:description" content="Film, TV, documentary and branded content enquiries. Based in Australia, working internationally.">
+  <meta property="og:url" content="https://webstreamedia.com.au/contact.html">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
 </head>
 
-  <body>
+<body>
 <header>
   <nav>
     <div class="logo">
@@ -20,9 +30,9 @@
 
     <div class="nav-links">
       <a href="work.html">Work</a>
+      <a href="credits.html">Credits</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="credits.html">Credits</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -42,10 +52,10 @@
 
         <!-- Formspree -->
         <form action="https://formspree.io/f/mpqadowr" method="POST">
-          <!-- Redirect after success -->
-          <input type="hidden" name="_next" value="thanks.html">
-          <!-- Email subject -->
+          <!-- Redirect after success (absolute is safest) -->
+          <input type="hidden" name="_next" value="https://webstreamedia.com.au/thanks.html">
           <input type="hidden" name="_subject" value="Webstreamedia enquiry">
+
           <!-- Spam protection (honeypot) -->
           <input type="text" name="company_website" autocomplete="off" tabindex="-1"
                  style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;"
@@ -74,7 +84,7 @@
           <p style="margin:0 0 14px;">
             <label for="message">Message</label><br>
             <textarea id="message" name="message" required
-              placeholder="A brief outline, scope, location(s), budget range, and links (YouTube/Vimeo/brief)."></textarea>
+              placeholder="Brief outline, scope, location(s), budget range, and links (YouTube/Vimeo/brief)."></textarea>
           </p>
 
           <p style="margin:0;">
@@ -82,7 +92,7 @@
           </p>
 
           <p style="color:#b7bbd8;font-size:14px;margin:10px 0 0;">
-            Responses go to <strong>admin@webstreamedia.com.au</strong> via Formspree settings.
+            Replies go to <strong>admin@webstreamedia.com.au</strong> via Formspree settings.
           </p>
         </form>
       </div>
@@ -114,17 +124,12 @@
     <img src="assets/smpte.jpg" alt="SMPTE">
     <img src="assets/dante.png" alt="Dante">
   </div>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 </footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Extra spam friction: bots often submit instantly. We delay submit enable slightly.
-  // Keeps UX fine for humans.
+  // Light anti-bot friction: disable submit briefly.
   (function () {
     const form = document.querySelector("form");
     if (!form) return;

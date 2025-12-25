@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPFN40RE3V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YPFN40RE3V');
-</script>  <meta charset="utf-8">
+  <meta charset="utf-8">
   <title>Selected Work | Webstreamedia Film & Television</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected film, television and documentary work by Webstreamedia, an independent Australian production company.">
+  <meta name="description" content="Selected film, documentary and commissioned work by Webstreamedia.">
   <link rel="canonical" href="https://webstreamedia.com.au/work.html">
   <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://www.youtube-nocookie.com">
 
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPFN40RE3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YPFN40RE3V');
+  </script>
 </head>
 
-  <body>
+<body>
 <header>
   <nav>
     <div class="logo">
@@ -27,10 +29,12 @@
         <img src="assets/logo.png" alt="Webstreamedia logo">
       </a>
     </div>
+
     <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a href="credits.html">Credits</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="credits.html">Credits</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -44,17 +48,17 @@
     independent film, and commissioned content.
   </p>
 
-  <!-- FEATURE DOCUMENTARY -->
   <section>
     <h2>Feature Documentary</h2>
-
     <div class="card">
-      <iframe width="100%" height="360"
-        src="https://www.youtube-nocookie.com/embed/YMTKlPDy4C0"
-        title="Feature Documentary"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div class="video">
+        <iframe
+          loading="lazy"
+          src="https://www.youtube-nocookie.com/embed/YMTKlPDy4C0"
+          title="Feature Documentary"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
 
       <p>
         <strong>Role:</strong> Producer / Director<br>
@@ -69,17 +73,17 @@
     </div>
   </section>
 
-  <!-- SHORT FILM -->
   <section>
     <h2>Short Film</h2>
-
     <div class="card">
-      <iframe width="100%" height="360"
-        src="https://www.youtube-nocookie.com/embed/tSe8evLxAwI"
-        title="Short Film"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div class="video">
+        <iframe
+          loading="lazy"
+          src="https://www.youtube-nocookie.com/embed/tSe8evLxAwI"
+          title="Short Film"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
 
       <p>
         <strong>Role:</strong> Producer / Director<br>
@@ -94,17 +98,17 @@
     </div>
   </section>
 
-  <!-- ADDITIONAL SELECTED WORK -->
   <section>
     <h2>Additional Selected Work</h2>
-
     <div class="card">
-      <iframe width="100%" height="360"
-        src="https://www.youtube-nocookie.com/embed/2wAOYd86Jig"
-        title="Selected Work"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div class="video">
+        <iframe
+          loading="lazy"
+          src="https://www.youtube-nocookie.com/embed/2wAOYd86Jig"
+          title="Additional Selected Work"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
 
       <p>
         Commissioned and independent content produced for digital and streaming platforms.
@@ -112,21 +116,26 @@
     </div>
   </section>
 
+  <section>
+    <div class="buttons">
+      <a class="button primary" href="contact.html">Enquire</a>
+      <a class="button" href="credits.html">Full credits</a>
+    </div>
+  </section>
 </main>
 
 <footer>
-© <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+  © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+
   <div class="footer-logos">
     <img src="assets/aacta.png" alt="AACTA">
     <img src="assets/smpte.jpg" alt="SMPTE">
     <img src="assets/dante2.png" alt="Dante">
   </div>
+</footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
 </script>
-</footer>
-
-  </body>
+</body>
 </html>

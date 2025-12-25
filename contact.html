@@ -115,7 +115,6 @@
     </div>
   </section>
 </main>
-
 <footer>
   © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
 
@@ -127,18 +126,9 @@
 </footer>
 
 <script>
+  // Year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Light anti-bot friction: disable submit briefly.
-  (function () {
-    const form = document.querySelector("form");
-    if (!form) return;
-    const btn = form.querySelector("button[type='submit']");
-    if (!btn) return;
-    btn.disabled = true;
-    setTimeout(() => { btn.disabled = false; }, 1200);
-  })();
-  
   // Light anti-bot friction: disable submit briefly.
   (function () {
     const form = document.querySelector("form");

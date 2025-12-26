@@ -2,26 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Selected Work | Webstreamedia</title>
+  <title>Selected Work | Webstreamedia Film & Television</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected film, documentary and short-form work by Webstreamedia — independent production based in Australia, working internationally.">
+  <meta name="description" content="Selected film, television and documentary work by Webstreamedia, an independent Australian production company.">
   <link rel="canonical" href="https://webstreamedia.com.au/work.html">
   <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
-  <link rel="preconnect" href="https://i.ytimg.com">
 
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Webstreamedia">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Selected Work | Webstreamedia">
-  <meta property="og:description" content="Feature doc, short film and selected commissioned work.">
-  <meta property="og:url" content="https://webstreamedia.com.au/work.html">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPFN40RE3V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -35,14 +23,14 @@
 <header>
   <nav>
     <div class="logo">
-      <a href="index.html"><img src="assets/logo.png" alt="Webstreamedia logo"></a>
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Webstreamedia logo">
+      </a>
     </div>
-
     <div class="nav-links">
-      <a href="work.html">Work</a>
-      <a href="credits.html">Credits</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="credits.html">Credits</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -52,10 +40,11 @@
   <h1>Selected Work</h1>
 
   <p>
-    A selection of long-form and short-form projects across documentary, independent film,
-    and commissioned content.
+    A selection of long-form and short-form projects produced across documentary,
+    independent film, and commissioned content.
   </p>
 
+  <!-- FEATURE DOCUMENTARY -->
   <section>
     <h2>Feature Documentary</h2>
 
@@ -63,24 +52,28 @@
       <div class="video">
         <iframe
           src="https://www.youtube-nocookie.com/embed/YMTKlPDy4C0"
-          title="Feature Documentary — Webstreamedia"
-          loading="lazy"
+          title="Feature Documentary"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
 
       <p>
+        <strong>Title:</strong> Follow the Sun<br>
         <strong>Role:</strong> Producer / Director<br>
         <strong>Year:</strong> 2008<br>
         <strong>Duration:</strong> 45 minutes
       </p>
 
       <p>
-        A long-form documentary produced for broadcast and independent distribution, focused on access-driven storytelling and editorial integrity.
+        An independently produced documentary about filmmaking in Sydney. Originally developed under the working title
+        <em>Atom Heart Mother</em>, the film was later released as <em>Follow the Sun</em>, starring Helen Middlemass and Barry Otto.
+        It follows the creative and logistical challenges faced by independent producers navigating the bureaucratic
+        realities of City of Sydney Council regulations while trying to bring a feature project to life.
       </p>
     </div>
   </section>
 
+  <!-- SHORT FILM -->
   <section>
     <h2>Short Film</h2>
 
@@ -88,24 +81,27 @@
       <div class="video">
         <iframe
           src="https://www.youtube-nocookie.com/embed/tSe8evLxAwI"
-          title="Short Film — Webstreamedia"
-          loading="lazy"
+          title="Short Film"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
 
       <p>
+        <strong>Title:</strong> Cliff’s Edge<br>
         <strong>Role:</strong> Producer / Director<br>
         <strong>Year:</strong> 2023<br>
         <strong>Credits:</strong> Multiple international film awards
       </p>
 
       <p>
-        A narrative short developed as an independent production, recognised across multiple international festival circuits.
+        Produced on a budget of under $1,500 AUD in February 2023, <em>Cliff’s Edge</em> was written by award-winning writer
+        Chris Beadnell and is based on a real-life event that occurred in a Sunshine Coast mountain park. The film went on
+        to receive multiple international awards for direction, screenwriting, acting and editing.
       </p>
     </div>
   </section>
 
+  <!-- ADDITIONAL SELECTED WORK -->
   <section>
     <h2>Additional Selected Work</h2>
 
@@ -113,8 +109,7 @@
       <div class="video">
         <iframe
           src="https://www.youtube-nocookie.com/embed/2wAOYd86Jig"
-          title="Additional Selected Work — Webstreamedia"
-          loading="lazy"
+          title="Additional Selected Work"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
@@ -129,6 +124,7 @@
 
 <footer>
   © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+
   <div class="footer-logos">
     <img src="assets/aacta.png" alt="AACTA">
     <img src="assets/smpte.jpg" alt="SMPTE">
@@ -139,5 +135,6 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>

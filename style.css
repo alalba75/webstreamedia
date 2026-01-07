@@ -607,3 +607,117 @@ tr:last-child td {
     transition: none !important;
   }
 }
+/* =========================
+   Credits: Previous Versions boxes
+   ========================= */
+
+.previous-versions {
+  margin-top: 1.2rem;
+}
+
+.previous-versions h2,
+.previous-versions h3 {
+  margin-bottom: 0.65rem;
+}
+
+/* Grid wrapper for the boxes */
+.version-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+}
+
+/* Each version "box" */
+.version-box {
+  grid-column: span 12;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+  transition: transform 140ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.version-box:hover {
+  transform: translateY(-1px);
+  border-color: rgba(214, 31, 38, 0.35);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+/* Inner padding */
+.version-box .version-inner {
+  padding: 1.05rem 1.15rem 1rem;
+}
+
+/* Title row (e.g. "Version 6" + date) */
+.version-box .version-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.version-box .version-title {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+  color: var(--text);
+  font-weight: 750;
+}
+
+.version-box .version-date {
+  color: var(--faint);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Body text */
+.version-box p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+/* Tags / chips (optional) */
+.version-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.version-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* Button row (optional: e.g. download / view links) */
+.version-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+/* Responsive columns */
+@media (min-width: 720px) {
+  .version-box {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1040px) {
+  .version-box {
+    grid-column: span 4;
+  }
+}

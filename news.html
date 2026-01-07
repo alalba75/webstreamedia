@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>News | Webstreamedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Production news and updates from Webstreamedia.">
+  <link rel="canonical" href="https://webstreamedia.com.au/news.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Webstreamedia logo">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a href="news.html">News</a>
+      <a href="credits.html">Credits</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>News</h1>
+
+  <article class="card">
+    <h2>Blue Hermit — Super 16mm Digital Telecine</h2>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap:16px; margin:20px 0;">
+      <img src="assets/scanner1.jpg" alt="Super 16mm film scanning" style="width:100%; max-width:240px; border-radius:10px;">
+      <img src="assets/scanner2.jpg" alt="Telecine detail" style="width:100%; max-width:240px; border-radius:10px;">
+      <img src="assets/scanner3.jpg" alt="Film scanner" style="width:100%; max-width:240px; border-radius:10px;">
+    </div>
+
+    <p>
+      Webstreamedia has commenced a new digital telecine of the original Super 16mm camera negatives for the documentary project
+      <em>Blue Hermit</em>, bringing archival material into a modern post-production pipeline. The scan is being undertaken at high
+      resolution to preserve the texture, colour response and grain structure of the original film while enabling contemporary
+      grading and finishing workflows.
+    </p>
+
+    <p>
+      This process allows legacy footage to be integrated seamlessly with newly shot digital material, ensuring visual continuity
+      across the project’s evolving timeline. New scenes are currently being filmed this month to extend the narrative and deepen
+      the observational scope of the documentary. Together, the restored archival footage and new photography form a cohesive visual
+      record that reflects both the project’s history and its present direction.
+    </p>
+  </article>
+</main>
+
+<footer>
+  © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+
+  <div class="footer-logos">
+    <img src="assets/aacta.png" alt="AACTA">
+    <img src="assets/smpte.jpg" alt="SMPTE">
+    <img src="assets/dante2.png" alt="Dante">
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

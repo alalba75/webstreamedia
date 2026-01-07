@@ -377,3 +377,34 @@ footer{
 @media (prefers-reduced-motion: reduce){
   *{ scroll-behavior:auto !important; transition:none !important; }
 }
+/* =========================================================
+   NAV ACTIVE PILL — universal (covers nav-links + primary-nav + plain nav)
+   Paste at END of stylesheet
+   ========================================================= */
+
+/* Default nav link styling (safe baseline) */
+nav a{
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+/* Active “red pill” for any nav implementation */
+nav a.active,
+nav a[aria-current="page"],
+.primary-nav a.active,
+.primary-nav a[aria-current="page"],
+.nav-links a.active,
+.nav-links a[aria-current="page"]{
+  color: var(--text, #eaeaf0) !important;
+  background: rgba(255, 43, 43, 0.12) !important;
+  border-color: rgba(255, 43, 43, 0.35) !important;
+  text-decoration: none !important;
+}
+
+/* Keep hover nice and consistent */
+nav a:hover,
+nav a:focus-visible{
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.10);
+  text-decoration: none;
+}

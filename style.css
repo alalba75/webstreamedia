@@ -1,249 +1,47 @@
-:root{
-  --bg:#070812;
-  --bg2:#0b0d18;
-  --text:#eef0ff;
-  --muted:#b7bbd8;
-  --muted2:#8f95b8;
+/* ===== LAYOUT FIX: restore old “even spacing” card grids ===== */
 
-  --card: rgba(255,255,255,.045);
-  --line: rgba(255,255,255,.12);
-  --shadow: 0 14px 40px rgba(0,0,0,.40);
-
-  --accent:#ff2a3d;
-  --accent2:#ff5b6a;
-
-  --radius:14px;
-  --max:1040px;
-
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+/* Constrain content width (prevents full-bleed cards) */
+main, header nav, footer{
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:var(--font);
-  color:var(--text);
-  background:
-    radial-gradient(900px 520px at 80% -10%, rgba(255,42,61,.14), transparent 60%),
-    radial-gradient(760px 520px at 10% 0%, rgba(255,91,106,.08), transparent 55%),
-    linear-gradient(180deg, var(--bg), var(--bg2) 60%, #070812);
-}
-
-/* global media constraints (stops huge graphics) */
-img, video, svg, iframe{
-  max-width:100%;
-  height:auto;
-  display:block;
-}
-main img, main svg{
-  max-height:420px;      /* cap big hero graphics */
-  object-fit:contain;
-}
-@media (max-width: 700px){
-  main img, main svg{ max-height:320px; }
-}
-
-a{color:inherit; text-decoration:none}
-
-.container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 18px;
-}
-
-/* ===== Header / Nav ===== */
-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  backdrop-filter: blur(10px) saturate(140%);
-  background: rgba(7,8,18,.72);
-  border-bottom:1px solid var(--line);
-}
-
-/* supports header>nav layout you already use */
-header nav{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:10px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-}
-
-.logo img{
-  height:34px;            /* smaller logo */
-  width:auto;
-}
-
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  justify-content:flex-end;
-}
-
-.nav-links a{
-  display:inline-flex;
-  align-items:center;
-  padding:7px 10px;       /* smaller pills */
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.02);
-  color:var(--muted);
-  font-size:14px;
-  line-height:1;
-  transition: transform .12s ease, border-color .12s ease, background .12s ease, color .12s ease;
-}
-.nav-links a:hover{
-  transform: translateY(-1px);
-  border-color: rgba(255,42,61,.45);
-  color:var(--text);
-}
-.nav-links a.active{
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  border-color: rgba(255,91,106,.75);
-  color:#fff;
-  box-shadow: 0 10px 26px rgba(255,42,61,.20);
-}
-
-/* ===== Main / Typography ===== */
-main{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:18px 18px 44px;  /* tighter */
-}
-
-h1{
-  margin:0 0 8px;
-  font-size:1.6rem;        /* smaller H1 */
-  line-height:1.18;
-  letter-spacing:.1px;
-}
-h2{
-  margin:0 0 8px;
-  font-size:1.12rem;
-  line-height:1.25;
-}
-
-p{
-  margin:0 0 10px;
-  color:var(--muted);
-  line-height:1.6;
-  font-size:15px;          /* tighter body */
-}
-
-.lead{
-  font-size:15.5px;        /* still “lead”, not huge */
-  color:var(--muted);
-}
-
-/* ===== Cards / Grid ===== */
+/* Make cards NOT stretch into huge blocks */
 .card{
-  background: var(--card);
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding:16px;            /* tighter cards */
+  width: 100%;
+  max-width: 100%;
 }
 
+/* Default grid behaviour: evenly spaced columns */
 .grid{
-  display:grid;
-  gap:14px;                /* smaller gaps */
+  display: grid;
+  gap: 16px;
+  align-items: start;
 }
 
-/* If any page uses inline grid-template-columns, make it collapse nicely on mobile */
+/* If you don’t specify columns inline, this gives you the old look */
+.grid{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Use 3 columns on wider screens when appropriate */
+@media (min-width: 1100px){
+  .grid.grid-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* If the page uses your inline: grid-template-columns: 1.2fr 0.8fr;
+   keep that on desktop, but make it collapse on mobile */
 @media (max-width: 900px){
-  .grid{ grid-template-columns:1fr !important; }
+  .grid{
+    grid-template-columns: 1fr !important;
+  }
 }
 
-/* ===== Buttons ===== */
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:10px;
+/* If your cards were previously visually “lighter” and not chunky */
+.card{
+  padding: 16px; /* tighter */
+  border-radius: 14px;
 }
-
-.button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 14px;       /* smaller button */
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.03);
-  color:var(--text);
-  font-weight:750;
-  font-size:14px;
-  transition: transform .12s ease, border-color .12s ease, background .12s ease;
-}
-.button:hover{
-  transform: translateY(-1px);
-  border-color: rgba(255,42,61,.45);
-  background: rgba(255,255,255,.05);
-}
-.button.primary{
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  border-color: rgba(255,91,106,.75);
-  box-shadow: 0 10px 26px rgba(255,42,61,.18);
-}
-
-/* ===== Forms ===== */
-label{
-  font-weight:700;
-  color:var(--muted2);
-  font-size:14px;
-}
-input, textarea{
-  width:100%;
-  padding:9px 10px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  background: rgba(0,0,0,.20);
-  color:var(--text);
-  font-family:inherit;
-  font-size:15px;
-}
-textarea{
-  min-height:120px;
-  resize:vertical;
-}
-input:focus, textarea:focus{
-  outline:none;
-  border-color: rgba(255,42,61,.55);
-}
-
-/* ===== Footer ===== */
-footer{
-  border-top:1px solid var(--line);
-  padding:18px 18px 28px;  /* tighter footer */
-  color:var(--muted2);
-  max-width:var(--max);
-  margin:0 auto;
-  font-size:14px;
-}
-.footer-brand{color:var(--text); font-weight:800}
-
-.footer-logos{
-  margin-top:10px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  flex-wrap:wrap;
-  opacity:.9;
-}
-.footer-logos img{
-  height:22px;             /* smaller logos */
-  width:auto;
-  filter: saturate(90%) contrast(105%);
-}
-
-/* ===== Optional: tighten any inline “big” headings you might have ===== */
-@media (max-width: 520px){
-  .nav-links a{padding:7px 9px}
-  .logo img{height:32px}
-}
-

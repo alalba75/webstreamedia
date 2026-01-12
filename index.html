@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,61 +14,41 @@
   <meta property="og:title" content="Webstreamedia — Production, Post, and Live Streaming (Australia)" />
   <meta property="og:description" content="Production, post-production, and livestreaming services across Australia — broadcast-ready workflows and reliable delivery." />
   <meta property="og:url" content="https://webstreamedia.com.au/" />
-  <meta property="og:image" content="https://webstreamedia.com.au/Assets/og-home.jpg" />
+  <meta property="og:image" content="https://webstreamedia.com.au/assets/og-home.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="Assets/favicon.png" />
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
-<style>
-  :root{
-    --bg:#0b0d12; --panel:#111827; --line:rgba(255,255,255,.12);
-    --text:#e7eaf0; --muted:#a7b0c0; --accent:#ff2a4f; --wrap:1120px;
-  }
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
-  .wrap{width:min(var(--wrap),calc(100% - 40px));margin:0 auto}
-  .site-header{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0}
-  .brand{display:inline-flex;align-items:center;justify-content:flex-start;gap:12px;max-width:520px;margin:0;padding:0;text-align:left}
-  .brand-mark{width:34px;height:34px;flex:0 0 34px;border-radius:12px;background:linear-gradient(135deg,#ff2a4f,#ff5b7a)}
-  .brand-text strong{display:block;font-size:15px;line-height:1.1}
-  .brand-sub{display:block;font-size:12px;color:var(--muted);margin-top:2px}
-  .nav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end;margin-left:auto}
-  .nav .pill{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;background:rgba(17,24,39,.92);border:1px solid rgba(255,255,255,.14);font-size:13px;letter-spacing:.2px}
-  .nav .pill:hover{border-color:rgba(255,42,79,.70);transform:translateY(-1px)}
-  .nav .pill.active,.nav .pill[aria-current="page"]{border-color:rgba(255,42,79,.85);background:rgba(255,42,79,.14)}
-  @media (max-width:820px){.header-inner{justify-content:flex-start}.nav{margin-left:0;justify-content:flex-start}.wrap{width:calc(100% - 28px)}}
-</style>
-
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Webstreamedia home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">
-          <strong>Webstreamedia</strong>
-          <span class="brand-sub">Production • Post • Streaming</span>
-        </span>
-      </a>
+  <!-- STANDARD HEADER (matches about.html) -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Webstreamedia logo">
+        </a>
+      </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="pill active" href="index.html" aria-current="page">Home</a>
-        <a class="pill" href="work.html">Work</a>
-        <a class="pill" href="news.html">News</a>
-        <a class="pill" href="credits.html">Credits</a>
-        <a class="pill" href="services.html">Services</a>
-        <a class="pill" href="about.html">About</a>
-      </nav>
-    </div>
+      <div class="nav-links">
+        <a class="active" aria-current="page" href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="credits.html">Credits</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
+      </div>
+    </nav>
   </header>
 
   <main id="main">
     <!-- HERO -->
     <section class="hero">
-      <div class="wrap hero-inner">
+      <div class="hero-inner">
         <div class="hero-copy">
           <p class="kicker">Australia • Broadcast-ready • Crew-friendly</p>
           <h1>Production, post, and livestreaming systems that don’t fall over.</h1>
@@ -79,8 +58,8 @@
           </p>
 
           <div class="hero-cta">
-            <a class="btn primary" href="services.html">View Services</a>
-            <a class="btn ghost" href="work.html">See Recent Work</a>
+            <a class="button primary" href="services.html">View Services</a>
+            <a class="button" href="work.html">See Recent Work</a>
           </div>
 
           <div class="hero-metrics" role="list" aria-label="Highlights">
@@ -100,7 +79,7 @@
         </div>
 
         <div class="hero-card" aria-label="Featured panel">
-          <div class="glass">
+          <div class="card">
             <h2 class="card-title">Now in development</h2>
             <p class="card-text">
               Short-form and documentary projects in Queensland and across Australia —
@@ -120,87 +99,90 @@
         </div>
       </div>
 
-      <!-- Optional background image (safe if missing) -->
       <div class="hero-bg" aria-hidden="true"></div>
     </section>
 
     <!-- FEATURED -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Featured work</h2>
-          <p>Selected productions, live streams, and post workflows.</p>
-        </div>
+    <section>
+      <h2>Featured work</h2>
+      <p class="muted">Selected productions, live streams, and post workflows.</p>
 
-        <div class="grid cards-3">
-          <article class="card">
-            <div class="thumb" data-thumb="1" aria-hidden="true"></div>
-            <div class="card-body">
-              <h3>Production & Direction</h3>
-              <p>Location shoots, doc workflows, crew coordination, and delivery planning.</p>
-              <a class="link" href="work.html">Explore work →</a>
-            </div>
-          </article>
+      <div class="grid cards-3">
+        <article class="card">
+          <h3>Production & Direction</h3>
+          <p>Location shoots, doc workflows, crew coordination, and delivery planning.</p>
+          <a class="link" href="work.html">Explore work →</a>
+        </article>
 
-          <article class="card">
-            <div class="thumb" data-thumb="2" aria-hidden="true"></div>
-            <div class="card-body">
-              <h3>Audio & Post</h3>
-              <p>Clean recording chains, editorial support, mix, and broadcast-safe outputs.</p>
-              <a class="link" href="services.html#post">Post services →</a>
-            </div>
-          </article>
+        <article class="card">
+          <h3>Audio & Post</h3>
+          <p>Clean recording chains, editorial support, mix, and broadcast-safe outputs.</p>
+          <a class="link" href="services.html#post">Post services →</a>
+        </article>
 
-          <article class="card">
-            <div class="thumb" data-thumb="3" aria-hidden="true"></div>
-            <div class="card-body">
-              <h3>Livestreaming</h3>
-              <p>Low-latency, stable streams with recording, backup paths, and monitoring.</p>
-              <a class="link" href="services.html#streaming">Streaming services →</a>
-            </div>
-          </article>
-        </div>
+        <article class="card">
+          <h3>Livestreaming</h3>
+          <p>Low-latency, stable streams with recording, backup paths, and monitoring.</p>
+          <a class="link" href="services.html#streaming">Streaming services →</a>
+        </article>
       </div>
     </section>
 
     <!-- LATEST NEWS -->
-    <section class="section section-muted">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Latest news</h2>
-          <p>Project updates, announcements, and releases.</p>
-        </div>
+    <section>
+      <h2>Latest news</h2>
+      <p class="muted">Project updates, announcements, and releases.</p>
 
-        <div class="grid cards-2">
-          <article class="card">
-            <div class="card-body">
-              <p class="meta">News</p>
-              <h3>New entries and project updates</h3>
-              <p>
-                Keep an eye on the news page for development notes, casting announcements,
-                production milestones, and delivery updates.
-              </p>
-              <a class="btn small" href="news.html">Go to News</a>
-            </div>
-          </article>
+      <div class="grid cards-2">
+        <article class="card">
+          <p class="muted" style="margin-bottom:6px;">News</p>
+          <h3>New entries and project updates</h3>
+          <p>
+            Keep an eye on the news page for development notes, casting announcements,
+            production milestones, and delivery updates.
+          </p>
+          <a class="button" href="news.html">Go to News</a>
+        </article>
 
-          <article class="card">
-            <div class="card-body">
-              <p class="meta">Services</p>
-              <h3>Need a reliable technical workflow?</h3>
-              <p>
-                From pre-pro planning to on-set audio/video and final delivery —
-                workflows designed to be repeatable, monitored, and fast.
-              </p>
-              <a class="btn small ghost" href="services.html">See Services</a>
-            </div>
-          </article>
-        </div>
+        <article class="card">
+          <p class="muted" style="margin-bottom:6px;">Services</p>
+          <h3>Need a reliable technical workflow?</h3>
+          <p>
+            From pre-pro planning to on-set audio/video and final delivery —
+            workflows designed to be repeatable, monitored, and fast.
+          </p>
+          <a class="button" href="services.html">See Services</a>
+        </article>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section">
-      <div class="wrap cta">
-        <div class="cta-inner">
-          <h2>Let’s build a stable pipeline for your next shoot or stream
+    <section>
+      <h2>Let’s build a stable pipeline for your next shoot or stream.</h2>
+      <p>
+        If you need broadcast-grade audio, clean routing, multi-cam switching, or dependable delivery,
+        Webstreamedia can step in as your technical backbone.
+      </p>
+      <div class="buttons">
+        <a class="button primary" href="services.html">Services overview</a>
+        <a class="button" href="about.html">About Webstreamedia</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- STANDARD FOOTER (matches about.html) -->
+  <footer>
+    © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+
+    <div class="footer-logos">
+      <img src="assets/aacta.png" alt="AACTA">
+      <img src="assets/smpte.jpg" alt="SMPTE">
+      <img src="assets/dante2.png" alt="Dante">
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

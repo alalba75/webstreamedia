@@ -1,70 +1,186 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>GriffinDoor24 — Community Channel</title>
-  <meta name="description" content="GriffinDoor24 — a bright, family-friendly community YouTube channel with weekly uploads and quick news updates." />
+  <title>Webstreamedia — Production, Post, and Live Streaming (Australia)</title>
+  <meta name="description" content="Webstreamedia provides production, post-production, and livestreaming services across Australia — broadcast-ready workflows, reliable delivery, and crew-friendly systems." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://webstreamedia.com.au/" />
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260112" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Webstreamedia" />
+  <meta property="og:title" content="Webstreamedia — Production, Post, and Live Streaming (Australia)" />
+  <meta property="og:description" content="Production, post-production, and livestreaming services across Australia — broadcast-ready workflows and reliable delivery." />
+  <meta property="og:url" content="https://webstreamedia.com.au/" />
+  <meta property="og:image" content="https://webstreamedia.com.au/Assets/og-home.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="canonical" id="canonical" href="">
-  <meta property="og:url" id="ogurl" content="">
+  <link rel="icon" href="Assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header injected by script.js -->
-  <div id="site-header"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Webstreamedia home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Webstreamedia</strong>
+          <span class="brand-sub">Production • Post • Streaming</span>
+        </span>
+      </a>
 
-  <main class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="pill active" href="index.html" aria-current="page">Home</a>
+        <a class="pill" href="work.html">Work</a>
+        <a class="pill" href="news.html">News</a>
+        <a class="pill" href="credits.html">Credits</a>
+        <a class="pill" href="services.html">Services</a>
+        <a class="pill" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main">
+    <!-- HERO -->
     <section class="hero">
-      <h2>Weekly videos + bite-size community news 🎉</h2>
-      <p>
-        Welcome to <strong>GriffinDoor24</strong> — a bright, family-friendly local channel.
-      </p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px">
-        <a class="btn primary" href="videos.html">Browse the Weekly Library</a>
-        <a class="btn" href="https://www.youtube.com/@TheGriffinDoor24" target="_blank" rel="noopener">Watch on YouTube</a>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Australia • Broadcast-ready • Crew-friendly</p>
+          <h1>Production, post, and livestreaming systems that don’t fall over.</h1>
+          <p class="lead">
+            Webstreamedia supports documentary, factual, live events, and digital delivery —
+            with reliable technical direction, clean audio workflows, and fast turnaround.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="services.html">View Services</a>
+            <a class="btn ghost" href="work.html">See Recent Work</a>
+          </div>
+
+          <div class="hero-metrics" role="list" aria-label="Highlights">
+            <div class="metric" role="listitem">
+              <div class="metric-num">Live</div>
+              <div class="metric-label">Switching • Streaming • Recording</div>
+            </div>
+            <div class="metric" role="listitem">
+              <div class="metric-num">Post</div>
+              <div class="metric-label">Edit • Audio • Delivery</div>
+            </div>
+            <div class="metric" role="listitem">
+              <div class="metric-num">Tech</div>
+              <div class="metric-label">RF/IP • Dante • Routing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Featured panel">
+          <div class="glass">
+            <h2 class="card-title">Now in development</h2>
+            <p class="card-text">
+              Short-form and documentary projects in Queensland and across Australia —
+              with scalable production pipelines and sensible on-set audio/video design.
+            </p>
+
+            <div class="card-actions">
+              <a class="link" href="news.html">Read latest updates →</a>
+            </div>
+
+            <div class="hero-badges" aria-label="Capabilities">
+              <span class="badge">Broadcast workflow</span>
+              <span class="badge">Hybrid / remote</span>
+              <span class="badge">On-location</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional background image (safe if missing) -->
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Featured work</h2>
+          <p>Selected productions, live streams, and post workflows.</p>
+        </div>
+
+        <div class="grid cards-3">
+          <article class="card">
+            <div class="thumb" data-thumb="1" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Production & Direction</h3>
+              <p>Location shoots, doc workflows, crew coordination, and delivery planning.</p>
+              <a class="link" href="work.html">Explore work →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" data-thumb="2" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Audio & Post</h3>
+              <p>Clean recording chains, editorial support, mix, and broadcast-safe outputs.</p>
+              <a class="link" href="services.html#post">Post services →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" data-thumb="3" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Livestreaming</h3>
+              <p>Low-latency, stable streams with recording, backup paths, and monitoring.</p>
+              <a class="link" href="services.html#streaming">Streaming services →</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="grid">
-
-      <!-- FEATURE VIDEO -->
-      <article class="card span-7">
-        <h3>Featured this week</h3>
-
-        <div class="video-wrap" style="margin-top:12px;">
-          <iframe
-            title="GriffinDoor24 featured video"
-            src="https://www.youtube-nocookie.com/embed/2D2TLWLu43Q?rel=0&modestbranding=1&playsinline=1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+    <!-- LATEST NEWS -->
+    <section class="section section-muted">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Latest news</h2>
+          <p>Project updates, announcements, and releases.</p>
         </div>
 
-        <p class="small" style="margin-top:10px;">
-          This week’s featured community video.
-        </p>
-      </article>
+        <div class="grid cards-2">
+          <article class="card">
+            <div class="card-body">
+              <p class="meta">News</p>
+              <h3>New entries and project updates</h3>
+              <p>
+                Keep an eye on the news page for development notes, casting announcements,
+                production milestones, and delivery updates.
+              </p>
+              <a class="btn small" href="news.html">Go to News</a>
+            </div>
+          </article>
 
-      <!-- SIDEBAR -->
-      <aside class="card span-5">
-        <h3>This week</h3>
-        <p>Put a short “what’s on” blurb here each week.</p>
-        <p style="margin-top:10px">Quick updates live in <strong>News</strong> as colourful text-only boxes.</p>
-      </aside>
-
+          <article class="card">
+            <div class="card-body">
+              <p class="meta">Services</p>
+              <h3>Need a reliable technical workflow?</h3>
+              <p>
+                From pre-pro planning to on-set audio/video and final delivery —
+                workflows designed to be repeatable, monitored, and fast.
+              </p>
+              <a class="btn small ghost" href="services.html">See Services</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-  </main>
-
-  <!-- Footer injected by script.js -->
-  <div id="site-footer"></div>
-
-  <script src="script.js" defer></script>
-</body>
-</html>
+    <!-- CTA -->
+    <section class="section">
+      <div class="wrap cta">
+        <div class="cta-inner">
+          <h2>Let’s build a stable pipeline for your next shoot or stream

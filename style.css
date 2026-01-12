@@ -232,3 +232,86 @@ footer{
   }
   .wrap{ width: calc(100% - 28px); }
 }
+/* ======================================================
+   GLOBAL FIX PATCH (header pills + logo sizes + footer logos)
+   Paste at END of style.css
+   ====================================================== */
+
+/* 1) Header: enforce pill style even if pages lack .pill class */
+.site-header nav a,
+header.site-header nav a,
+.site-header .nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 9px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(17,24,39,.92) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  font-size: 13px !important;
+  letter-spacing: .2px !important;
+  text-decoration: none !important;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease !important;
+}
+
+.site-header nav a:hover,
+header.site-header nav a:hover,
+.site-header .nav a:hover {
+  transform: translateY(-1px) !important;
+  border-color: rgba(255,42,79,.75) !important;
+}
+
+.site-header nav a.active,
+.site-header nav a[aria-current="page"],
+header.site-header nav a.active,
+header.site-header nav a[aria-current="page"],
+.site-header .nav a.active,
+.site-header .nav a[aria-current="page"] {
+  border-color: rgba(255,42,79,.85) !important;
+  background: rgba(255,42,79,.14) !important;
+}
+
+/* 2) Brand/logo: prevent huge logo/mark/text */
+.site-header .brand-mark {
+  width: 28px !important;
+  height: 28px !important;
+  flex: 0 0 28px !important;
+  border-radius: 10px !important;
+}
+
+.site-header .brand-text strong {
+  font-size: 14px !important;
+  line-height: 1.1 !important;
+}
+
+.site-header .brand img {
+  max-height: 32px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  object-fit: contain !important;
+}
+
+/* 3) Footer logos: clamp ALL images in footer */
+footer img,
+.site-footer img,
+.footer-logos img {
+  max-height: 28px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+}
+
+/* If your footer logos are inside links, keep spacing tidy */
+footer a img,
+.site-footer a img {
+  vertical-align: middle !important;
+}
+
+/* Mobile spacing */
+@media (max-width: 820px) {
+  .site-header nav,
+  .site-header .nav {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+  }
+}

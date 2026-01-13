@@ -1,32 +1,15 @@
+<!-- =========================
+     contact.html (COMPLETED)
+     ========================= -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Contact Webstreamedia | Production & Technical Enquiries</title>
+  <title>Contact | Webstreamedia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Private enquiry form for Webstreamedia production and technical services. Submissions are handled securely via Formspree.">
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Contact Webstreamedia for production, post and livestreaming enquiries.">
   <link rel="canonical" href="https://webstreamedia.com.au/contact.html">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Webstreamedia">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact Webstreamedia | Production & Technical Enquiries">
-  <meta property="og:description" content="Private enquiry form for production and technical services.">
-  <meta property="og:url" content="https://webstreamedia.com.au/contact.html">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPFN40RE3V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YPFN40RE3V');
-  </script>
 </head>
 
 <body>
@@ -40,97 +23,50 @@
 
     <div class="nav-links">
       <a href="work.html">Work</a>
+      <a href="news.html">News</a>
       <a href="credits.html">Credits</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a class="active" href="contact.html">Contact</a>
-      <a href="news.html">News</a>
     </div>
   </nav>
 </header>
 
 <main>
   <h1>Contact</h1>
-  <p>
-    For commissions, collaborations, or development conversations.
-    Please include project type, timeline, and any relevant links.
-  </p>
 
-  <section>
-    <div class="grid" style="grid-template-columns: 1.2fr 0.8fr;">
-      <div class="card">
-        <h2 style="margin-top:0;">Enquiry form</h2>
+  <section class="card">
+    <h2>Enquiries</h2>
+    <p class="muted">
+      Use the form below and include any relevant dates, location, deliverables, and turnaround requirements.
+    </p>
 
-        <!-- Formspree -->
-        <form action="https://formspree.io/f/mpqadowr" method="POST">
-          <!-- Redirect after success (absolute is safest) -->
-          <input type="hidden" name="_next" value="https://webstreamedia.com.au/thanks.html">
-          <input type="hidden" name="_subject" value="Webstreamedia enquiry">
-
-          <!-- Spam protection (honeypot) -->
-          <input type="text" name="company_website" autocomplete="off" tabindex="-1"
-                 style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;"
-                 aria-hidden="true">
-
-          <p style="margin:0 0 12px;">
-            <label for="name">Name</label><br>
-            <input id="name" name="name" required>
-          </p>
-
-          <p style="margin:0 0 12px;">
-            <label for="email">Email</label><br>
-            <input id="email" name="email" type="email" required>
-          </p>
-
-          <p style="margin:0 0 12px;">
-            <label for="type">Project type</label><br>
-            <input id="type" name="project_type" placeholder="Feature doc / short film / series / livestream / branded">
-          </p>
-
-          <p style="margin:0 0 12px;">
-            <label for="timeline">Timeline</label><br>
-            <input id="timeline" name="timeline" placeholder="Dates or delivery window">
-          </p>
-
-          <p style="margin:0 0 14px;">
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" required
-              placeholder="Brief outline, scope, location(s), budget range, and links (YouTube/Vimeo/brief)."></textarea>
-          </p>
-
-          <p style="margin:0;">
-            <button class="button primary" type="submit">Send enquiry</button>
-          </p>
-
-          <p style="color:#b7bbd8;font-size:14px;margin:10px 0 0;">
-            Submissions are delivered privately via Formspree.
-          </p>
-        </form>
+    <!-- NOTE: Replace ACTION with your Formspree / endpoint if you use one -->
+    <form action="#" method="post">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
       </div>
 
-      <div class="card">
-        <h2 style="margin-top:0;">What to include</h2>
-        <p style="color:#b7bbd8;font-size:18px; margin-bottom:12px;">
-          <strong>Scope:</strong> What you need made or supported<br>
-          <strong>Where:</strong> Australia / remote / multi-location<br>
-          <strong>When:</strong> Key dates or delivery window
-        </p>
-        <p style="color:#b7bbd8; margin-top:0;">
-          If you have reference links, include them in the message field. If the project is time-sensitive,
-          note the deadline clearly.
-        </p>
-
-        <div class="buttons">
-          <a class="button" href="work.html">View work</a>
-          <a class="button" href="credits.html">Credits</a>
-        </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
       </div>
-    </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
   </section>
 </main>
 
 <footer>
-  © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+  <div class="footer-top">
+    © <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+  </div>
 
   <div class="footer-logos">
     <img src="assets/aacta.png" alt="AACTA">
@@ -141,16 +77,6 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Light anti-bot friction: disable submit briefly.
-  (function () {
-    const form = document.querySelector("form");
-    if (!form) return;
-    const btn = form.querySelector("button[type='submit']");
-    if (!btn) return;
-    btn.disabled = true;
-    setTimeout(() => { btn.disabled = false; }, 1200);
-  })();
 </script>
 </body>
 </html>

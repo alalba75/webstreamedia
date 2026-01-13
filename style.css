@@ -178,3 +178,27 @@ textarea{ min-height: 140px; }
   header nav .logo img{ height: 64px; }
   footer .footer-logos img{ height: 22px; }
 }
+/* === FIX: stop cards stretching full width === */
+
+/* Default cards: fixed max width + centred */
+.card{
+  width: 100%;
+  max-width: 900px;     /* change to taste: 820 / 860 / 900 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid containers: keep cards from stretching weirdly */
+.grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center; /* centers items inside each grid cell */
+}
+
+/* Cards inside grids: cap smaller so they don’t balloon */
+.grid .card{
+  width: 100%;
+  max-width: 420px;     /* change to taste: 360 / 400 / 440 */
+  margin: 0;            /* grid handles spacing */
+}

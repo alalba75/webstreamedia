@@ -140,9 +140,9 @@ footer .footer-logos{
 }
 
 footer .footer-logos img{
-  height: 24px;
+  height: 80px;
   width: auto;
-  max-height: 24px;
+  max-height: 80px;
   object-fit: contain;
 }
 

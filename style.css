@@ -202,3 +202,10 @@ textarea{ min-height: 140px; }
   max-width: 420px;     /* change to taste: 360 / 400 / 440 */
   margin: 0;            /* grid handles spacing */
 }
+/* Film page logo */
+.film-logo {
+max-height: 350px;   /* roughly 3x original */
+  width: auto;
+  display: block;
+  margin: 30px auto; /* centers it */
+}

@@ -1,6 +1,6 @@
 /* ======================================================
-   Webstreamedia — style.css (Version 13)
-   Clean rebuild with strict scoping.
+   Webstreamedia - style.css (Version 14)
+   Clean rebuild with strict scoping. ASCII-only.
    ====================================================== */
 
 :root{
@@ -42,6 +42,7 @@ main{
 h1,h2,h3{ margin:0 0 14px; line-height:1.2; }
 h1{ font-size: clamp(28px, 3vw, 42px); }
 h2{ font-size: clamp(20px, 2.1vw, 28px); }
+
 p{ margin: 0 0 14px; }
 .muted{ color: var(--muted); }
 
@@ -67,6 +68,7 @@ header nav{
   gap: 14px;
 }
 
+/* Expectation: <div class="logo"><a><img ...></a></div> */
 header nav .logo img{
   height: 72px;
   width: auto;
@@ -88,6 +90,7 @@ header nav .logo img{
   font-weight: 650;
   font-size: 14px;
   transition: transform .12s ease, background .12s ease, border-color .12s ease;
+  text-decoration: none;
 }
 
 .nav-links a:hover{
@@ -110,11 +113,32 @@ header nav .logo img{
   border-radius: var(--r);
   box-shadow: var(--shadow);
   padding: 18px;
-  margin: 18px 0;
+
+  /* Centered default card sizing */
+  width: 100%;
+  max-width: 900px;
+  margin: 18px auto;
 }
 
 /* =========================
-   Footer — strict sizing
+   Generic Grid helper
+   ========================= */
+.grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
+}
+
+/* Cards inside generic grids: cap width and let grid control spacing */
+.grid .card{
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+}
+
+/* =========================
+   Footer - strict sizing
    ========================= */
 footer{
   border-top: 1px solid var(--line);
@@ -164,6 +188,55 @@ input, textarea{
 textarea{ min-height: 140px; }
 
 /* =========================
+   Film page: logo
+   ========================= */
+.film-logo{
+  max-height: 350px;
+  width: auto;
+  display: block;
+  margin: 30px auto;
+}
+
+/* =========================
+   Film page: synopsis beats cards grid
+   ========================= */
+.film-beats{
+  margin-top: 24px;
+}
+
+.film-beats-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+/* Default: 2-up */
+.film-beats-grid .card{
+  grid-column: span 6;
+  width: 100%;
+  max-width: none; /* let the grid handle sizing */
+  margin: 0;
+}
+
+/* Small screens: 1-up */
+@media (max-width: 700px){
+  .film-beats-grid .card{
+    grid-column: span 12;
+  }
+}
+
+/* Large screens: 4-up */
+@media (min-width: 1100px){
+  .film-beats-grid .card{
+    grid-column: span 3;
+  }
+}
+
+.film-beats .card h3{
+  margin-top: 0;
+}
+
+/* =========================
    Mobile
    ========================= */
 @media (max-width: 860px){
@@ -177,35 +250,4 @@ textarea{ min-height: 140px; }
 @media (max-width: 520px){
   header nav .logo img{ height: 64px; }
   footer .footer-logos img{ height: 22px; }
-}
-/* === FIX: stop cards stretching full width === */
-
-/* Default cards: fixed max width + centred */
-.card{
-  width: 100%;
-  max-width: 900px;     /* change to taste: 820 / 860 / 900 */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Grid containers: keep cards from stretching weirdly */
-.grid{
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-items: center; /* centers items inside each grid cell */
-}
-
-/* Cards inside grids: cap smaller so they don’t balloon */
-.grid .card{
-  width: 100%;
-  max-width: 420px;     /* change to taste: 360 / 400 / 440 */
-  margin: 0;            /* grid handles spacing */
-}
-/* Film page logo */
-.film-logo {
-max-height: 350px;   /* roughly 3x original */
-  width: auto;
-  display: block;
-  margin: 30px auto; /* centers it */
 }

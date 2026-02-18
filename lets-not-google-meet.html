@@ -1,0 +1,79 @@
+﻿<!-- =========================
+     news.html (COMPLETED)
+     ========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>News | Webstreamedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Production news and updates from Webstreamedia.">
+  <link rel="canonical" href="https://webstreamedia.com.au/news.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Webstreamedia logo">
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a class="active" href="news.html">News</a>
+      <a href="credits.html">Credits</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Let’s Not Google Meet</h1>
+  <p class="muted">A feature documentary in development examining transparency, escalation pathways, and customer interaction at scale.</p>
+
+  <div class="card">
+    <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+     <img src="assets/films/lets-not-google-meet/google-logo.png"
+     alt="Let’s Not Google Meet logo"
+     class="film-logo">
+
+      <div>
+        <h2 style="margin:0 0 8px;">Project summary</h2>
+        <p style="margin:0;">
+          Originating from documented correspondence and case timelines, the film expands through expert interviews and international contributors
+          to examine how automation-first systems can limit clear, accountable resolution pathways.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>Status</h2>
+    <p>In development. Festival submission target: 2027.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    Â© <span id="year"></span> <span class="footer-brand">Webstreamedia</span>
+  </div>
+
+  <div class="footer-logos">
+    <img src="assets/aacta.png" alt="AACTA">
+    <img src="assets/smpte.jpg" alt="SMPTE">
+    <img src="assets/dante2.png" alt="Dante">
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

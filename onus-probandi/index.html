@@ -4,20 +4,54 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Onus Probandi | Webstreamedia</title>
-  <link rel="stylesheet" href="/styles.css?v=1" />
+
+  <!-- your site CSS -->
+  <link rel="stylesheet" href="/style.css?v=2" />
+
+  <!-- Onus-only image sizing (scoped) -->
+  <style>
+    body.onus img{
+      max-width:100%;
+      height:auto;
+    }
+
+    body.onus .poster img{
+      display:block;
+      width:100%;
+      max-width:520px;
+      margin:0 auto;
+      border-radius:14px;
+    }
+
+    body.onus .thumb img{
+      display:block;
+      width:100%;
+      max-width:360px;
+      margin:0 auto;
+      border-radius:14px;
+    }
+
+    body.onus .thumb figcaption,
+    body.onus .poster figcaption{
+      margin-top:8px;
+      font-size:0.9rem;
+      text-align:center;
+      opacity:.8;
+    }
+  </style>
 </head>
 
-<body>
+<body class="onus">
 
 <header>
   <nav>
     <div class="logo">
-      <a href="/" aria-label="Webstreamedia home">
+      <a href="/">
         <img src="/assets/logo.png" alt="Webstreamedia" />
       </a>
     </div>
 
-    <div class="nav-links" role="navigation" aria-label="Onus Probandi navigation">
+    <div class="nav-links">
       <a class="is-active" href="/onus-probandi/">Overview</a>
       <a href="/onus-probandi/concept.html">Concept</a>
       <a href="/onus-probandi/actors.html">Actors</a>
@@ -30,99 +64,96 @@
 
 <main class="wrap">
 
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="kicker">Short Film - Crime Thriller - In Development</p>
-        <h1>Onus Probandi</h1>
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Short Film - Crime Thriller - In Development</p>
+      <h1>Onus Probandi</h1>
 
-        <p class="lede">
-          A dark, cinematic Queensland crime thriller exploring what happens when forensic certainty fails
-          and the pressure to close a case overrides the truth.
-        </p>
+      <p class="lede">
+        A dark, cinematic Queensland crime thriller exploring what happens when forensic certainty fails
+        and the pressure to close a case overrides the truth.
+      </p>
 
-        <div class="hero-actions">
-          <a class="btn" href="/onus-probandi/signup.html">Get involved</a>
-          <a class="btn btn-ghost" href="/onus-probandi/concept.html">Read the concept</a>
-        </div>
-      </div>
-
-      <div class="hero-media">
-        <figure class="poster">
-          <img src="/assets/poster.png" alt="Onus Probandi poster" loading="eager" />
-          <figcaption>Poster (work in progress)</figcaption>
-        </figure>
+      <div class="hero-actions">
+        <a class="btn" href="/onus-probandi/signup.html">Get involved</a>
+        <a class="btn btn-ghost" href="/onus-probandi/concept.html">Read the concept</a>
       </div>
     </div>
-  </section>
 
-  <section class="panel">
-    <h2>At a glance</h2>
-
-    <div class="grid-3">
-      <article class="card">
-        <h3>Logline</h3>
-        <p>
-          When detectives Daniel Bouric and Elise Watts pursue a case compromised by flawed forensic evidence,
-          they race against political pressure and a manipulative offender who always seems one step ahead.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Synopsis</h3>
-        <p>
-          In a climate of growing mistrust in Queensland forensic laboratories, Bouric and Watts investigate a
-          violent crime where the DNA evidence fails. With pressure mounting for a fast resolution, the detectives
-          must risk their reputations to prove what the system cannot: guilt beyond a reasonable doubt.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Why now</h3>
-        <p>
-          Onus Probandi speaks to contemporary concerns around forensic integrity and public trust in justice systems.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="panel">
-    <h2>Media</h2>
-
-    <div class="grid-3">
-      <figure class="thumb">
-        <img src="/assets/housenight1.png" alt="House night exterior 1" loading="lazy" />
-        <figcaption>Exterior location reference</figcaption>
-      </figure>
-
-      <figure class="thumb">
-        <img src="/assets/housenight2.png" alt="House night exterior 2" loading="lazy" />
-        <figcaption>Exterior location reference</figcaption>
-      </figure>
-
-      <figure class="thumb">
-        <img src="/assets/poster.png" alt="Onus Probandi poster" loading="lazy" />
-        <figcaption>Poster</figcaption>
+    <div class="hero-media">
+      <figure class="poster">
+        <img src="/assets/poster.png" alt="Onus Probandi poster" loading="eager"/>
+        <figcaption>Poster (work in progress)</figcaption>
       </figure>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>At a glance</h2>
+
+  <div class="grid-3">
+    <article class="card">
+      <h3>Logline</h3>
+      <p>
+        When detectives Daniel Bouric and Elise Watts pursue a case compromised by flawed forensic evidence,
+        they race against political pressure and a manipulative offender who always seems one step ahead.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Synopsis</h3>
+      <p>
+        In a climate of growing mistrust in Queensland forensic laboratories, Bouric and Watts investigate a
+        violent crime where the DNA evidence fails. With pressure mounting for a fast resolution, the detectives
+        must risk their reputations to prove what the system cannot: guilt beyond a reasonable doubt.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Why now</h3>
+      <p>
+        Onus Probandi speaks to contemporary concerns around forensic integrity and public trust in justice systems.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Media</h2>
+
+  <div class="grid-3">
+    <figure class="thumb">
+      <img src="/assets/housenight1.png" alt="House night exterior 1" loading="lazy"/>
+      <figcaption>Exterior location reference</figcaption>
+    </figure>
+
+    <figure class="thumb">
+      <img src="/assets/housenight2.png" alt="House night exterior 2" loading="lazy"/>
+      <figcaption>Exterior location reference</figcaption>
+    </figure>
+
+    <figure class="thumb">
+      <img src="/assets/poster.png" alt="Onus Probandi poster" loading="lazy"/>
+      <figcaption>Poster</figcaption>
+    </figure>
+  </div>
+</section>
 
 </main>
 
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-left">© <span id="y"></span> Webstreamedia</div>
-    <div class="footer-logos" aria-label="Footer logos">
-      <img src="/assets/IMDbPro.png" alt="IMDb" loading="lazy" />
+    <div class="footer-logos">
+      <img src="/assets/IMDbPro.png" alt="IMDb"/>
     </div>
   </div>
 </footer>
 
 <script>
-  (function(){
-    var y = document.getElementById("y");
-    if (y) y.textContent = String(new Date().getFullYear());
-  })();
+  document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
 </body>

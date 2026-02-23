@@ -1,10 +1,10 @@
 ﻿[build]
   publish = "."
 
-
 # ---------------------------
 # Onus Probandi pretty URLs
 # ---------------------------
+
 [[redirects]]
   from = "/onus-probandi/actors"
   to = "/onus-probandi/actors.html"
@@ -35,7 +35,6 @@
   to = "/onus-probandi/index.html"
   status = 301
 
-# Optional: allow /onus-probandi/overview
 [[redirects]]
   from = "/onus-probandi/overview"
   to = "/onus-probandi/index.html"

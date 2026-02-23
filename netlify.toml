@@ -1,0 +1,42 @@
+﻿[build]
+  publish = "."
+
+
+# ---------------------------
+# Onus Probandi pretty URLs
+# ---------------------------
+[[redirects]]
+  from = "/onus-probandi/actors"
+  to = "/onus-probandi/actors.html"
+  status = 301
+
+[[redirects]]
+  from = "/onus-probandi/crew"
+  to = "/onus-probandi/crew.html"
+  status = 301
+
+[[redirects]]
+  from = "/onus-probandi/concept"
+  to = "/onus-probandi/concept.html"
+  status = 301
+
+[[redirects]]
+  from = "/onus-probandi/involvers"
+  to = "/onus-probandi/involvers.html"
+  status = 301
+
+[[redirects]]
+  from = "/onus-probandi/signup"
+  to = "/onus-probandi/signup.html"
+  status = 301
+
+[[redirects]]
+  from = "/onus-probandi/index"
+  to = "/onus-probandi/index.html"
+  status = 301
+
+# Optional: allow /onus-probandi/overview
+[[redirects]]
+  from = "/onus-probandi/overview"
+  to = "/onus-probandi/index.html"
+  status = 301

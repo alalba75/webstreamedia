@@ -11,44 +11,47 @@
 <body class="onus">
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Shared injected header -->
   <div id="siteHeader"></div>
 
   <main id="main" class="onus-main">
     <section class="wrap">
       <h1>Signup / Contact</h1>
       <p class="lede">
-        If you’d like to be kept in the loop (casting calls, production updates, screenings), drop your details below.
+        If you’d like to be kept in the loop (casting calls, production updates, screenings),
+        drop your details below.
       </p>
 
       <div class="grid-2">
         <div class="card">
-          <h2>Join the updates list</h2>
+          <h2>Contact</h2>
 
-          <!-- Option A: static email fallback -->
           <p>
-            Email: <a href="mailto:admin@webstreamedia.com">admin@webstreamedia.com.au</a>
+            Email: <a href="mailto:admin@webstreamedia.com?subject=Onus%20Probandi%20Inquiry">admin@webstreamedia.com</a>
           </p>
 
-          <!-- Option B: turn this into a real form later (Netlify/Formspree) -->
+          <hr class="rule" />
+
+          <h3>Signup (placeholder)</h3>
+          <p class="fineprint">
+            This form is a placeholder for now. Use the email link above for all inquiries.
+          </p>
+
           <form class="form" method="post" action="#" onsubmit="return false;">
             <label>
               Name
-              <input name="name" autocomplete="name" required />
+              <input name="name" autocomplete="name" />
             </label>
 
             <label>
               Email
-              <input name="email" type="email" autocomplete="email" required />
+              <input name="email" type="email" autocomplete="email" />
             </label>
 
             <label>
               Message (optional)
               <textarea name="message" rows="4" placeholder="Tell us how you’d like to be involved"></textarea>
             </label>
-
-            <p class="fineprint">
-              Note: This form is currently a placeholder. Use the email link above to contact us.
-            </p>
 
             <button type="submit" class="btn" disabled aria-disabled="true">Submit (disabled)</button>
           </form>
@@ -65,7 +68,7 @@
 
           <hr class="rule" />
 
-          <h3>Press / Links</h3>
+          <h3>Links</h3>
           <ul class="bullets">
             <li><a href="../news.html">Webstreamedia News</a></li>
             <li><a href="../credits.html">Credits</a></li>
@@ -75,10 +78,9 @@
     </section>
   </main>
 
+  <!-- Shared injected footer -->
   <div id="siteFooter"></div>
 
   <script defer src="assets/onus-shell.js"></script>
 </body>
 </html>
-
-

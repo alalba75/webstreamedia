@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crew | Onus Probandi | Webstreamedia</title>
+  <meta name="description" content="Key creative team for Onus Probandi short film." />
+
+  <link rel="stylesheet" href="/style.css?v=6" />
+
+  <style>
+    body.onus img{ max-width:100%; height:auto; }
+
+    body.onus .crew-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:18px;
+    }
+    @media (max-width: 860px){
+      body.onus .crew-grid{ grid-template-columns: 1fr; }
+    }
+
+    body.onus .crew-card{
+      display:grid;
+      grid-template-columns: 160px 1fr;
+      gap:16px;
+      align-items:start;
+    }
+    @media (max-width: 520px){
+      body.onus .crew-card{ grid-template-columns: 1fr; }
+    }
+
+    body.onus .crew-photo img{
+      width:100%;
+      max-width:160px;
+      border-radius:14px;
+      display:block;
+    }
+
+    body.onus .crew-meta{
+      opacity:.9;
+      margin-top:6px;
+      font-size:.95rem;
+    }
+  </style>
+</head>
+
+<body class="onus">
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="/" aria-label="Webstreamedia home">
+        <img src="/assets/logo.png" alt="Webstreamedia" />
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="/onus-probandi/">Overview</a>
+      <a href="/onus-probandi/concept.html">Concept</a>
+      <a href="/onus-probandi/actors.html">Actors</a>
+      <a class="is-active" href="/onus-probandi/crew.html">Crew Bio</a>
+      <a href="/onus-probandi/involvers.html">Involvers</a>
+      <a href="/onus-probandi/signup.html">Signup/Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<section class="panel">
+  <h1>Key Creative Team</h1>
+  <p class="lede">
+    Onus Probandi brings together experienced independent filmmakers with a strong track record in
+    character-driven storytelling and award-winning short form production.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>Writer</h2>
+
+  <article class="card crew-card">
+    <div class="crew-photo">
+      <img src="/assets/films/onus_probandi/chris.jpg" alt="Chris Beadnell headshot" loading="lazy" />
+    </div>
+
+    <div>
+      <h3>Chris Beadnell</h3>
+      <div class="crew-meta"><strong>Writer – Onus Probandi</strong></div>
+
+      <p>
+        Chris Beadnell is an award-winning Australian filmmaker specialising in emotionally driven
+        narratives across thriller, drama, mystery, and dark comedy genres. His screenwriting work
+        has received more than 75 film festival awards across multiple short films and screenplays,
+        demonstrating strong international recognition.
+      </p>
+
+      <p>
+        His original short screenplay <em>Onus Probandi</em> has itself received multiple awards and
+        festival placements, reflecting its appeal across both narrative and screenplay competitions.
+        Chris previously collaborated with director Adrian Alback on the short film
+        <em>Cliff’s Edge</em> (2023), which achieved 15 award wins on the festival circuit.
+      </p>
+
+      <p>
+        In 2024, his short film <em>The Note</em> won Best Screenplay at the International Film Festival
+        Australia (IFFA) and Best Male Director at the Power24 International Film Festival in Durban.
+        His 2025 feature adaptation of <em>Bingo Man</em> received Best Feature Screenplay at the
+        Melbourne International Film Festival.
+      </p>
+
+      <p>
+        Chris specialises in character-driven storytelling that explores emotional vulnerability
+        within suspenseful narrative frameworks, often working within micro-budget production
+        environments while maximising creative impact.
+      </p>
+    </div>
+  </article>
+
+</section>
+
+<section class="panel">
+  <h2>Producer / Director</h2>
+
+  <article class="card crew-card">
+    <div>
+      <h3>Adrian Alback</h3>
+      <div class="crew-meta"><strong>Producer / Director – Onus Probandi</strong></div>
+
+      <p>
+        Adrian Alback is an Australian broadcast and online production specialist with extensive
+        experience across live television, livestreaming, and independent film production.
+        His previous directing credit <em>Cliff’s Edge</em> (2023) received 15 international
+        festival awards.
+      </p>
+
+      <p>
+        Adrian’s background in broadcast audio engineering and multi-camera production includes
+        roles with Reuters Television (Tokyo), Channel Nine Brisbane, Global Television Sydney,
+        and Channel Seven Brisbane. He holds AFTRS AD certification and specialises in
+        multi-platform production workflows bridging broadcast and digital delivery.
+      </p>
+
+      <p>
+        Current projects include the feature documentary <em>Blue Hermit</em> (2026) and the
+        technology-focused documentary <em>Let’s Not Google Meet</em>.
+      </p>
+    </div>
+  </article>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-left">© <span id="y"></span> Webstreamedia</div>
+    <div class="footer-logos">
+      <img src="/assets/IMDbPro.png" alt="IMDb" loading="lazy" />
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var y = document.getElementById("y");
+    if (y) y.textContent = String(new Date().getFullYear());
+  })();
+</script>
+
+</body>
+</html>

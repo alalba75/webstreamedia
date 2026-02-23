@@ -251,4 +251,7 @@ footer .footer-logos img{
   .onus .actor-media img{
     height:280px;
   }
+}/* Onus Probandi actor headshots - keep top of head */
+.onus .actor-media img{
+  object-position: center top;
 }

@@ -1,5 +1,5 @@
 /* ======================================================
-   Webstreamedia - style.css (Version 14)
+   Webstreamedia - style.css (Version 15)
    Clean rebuild with strict scoping. ASCII-only.
    ====================================================== */
 
@@ -14,18 +14,18 @@
   --accent:#ff2a4f;
   --wrap:1120px;
   --r:18px;
-  --shadow: 0 18px 40px rgba(0,0,0,.35);
+  --shadow:0 18px 40px rgba(0,0,0,.35);
 }
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
 
 body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:
     radial-gradient(1100px 520px at 18% -10%, rgba(255,42,79,.20), transparent 55%),
     radial-gradient(900px 480px at 86% 0%, rgba(70,130,255,.12), transparent 55%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
+    linear-gradient(180deg,var(--bg),var(--bg2));
   color:var(--text);
   min-height:100vh;
 }
@@ -34,271 +34,221 @@ body{
    Layout
    ========================= */
 main{
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 28px 18px 46px;
+  max-width:var(--wrap);
+  margin:0 auto;
+  padding:28px 18px 46px;
 }
 
 h1,h2,h3{ margin:0 0 14px; line-height:1.2; }
-h1{ font-size: clamp(28px, 3vw, 42px); }
-h2{ font-size: clamp(20px, 2.1vw, 28px); }
+h1{ font-size:clamp(28px,3vw,42px); }
+h2{ font-size:clamp(20px,2.1vw,28px); }
 
-p{ margin: 0 0 14px; }
-.muted{ color: var(--muted); }
+p{ margin:0 0 14px; }
+.muted{ color:var(--muted); }
 
 /* =========================
    Header / Nav
    ========================= */
 header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(10px);
-  background: rgba(11,13,18,.78);
-  border-bottom: 1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(10px);
+  background:rgba(11,13,18,.78);
+  border-bottom:1px solid var(--line);
 }
 
 header nav{
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 12px 18px;
+  max-width:var(--wrap);
+  margin:0 auto;
+  padding:12px 18px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap: 14px;
+  gap:14px;
 }
 
-/* Expectation: <div class="logo"><a><img ...></a></div> */
 header nav .logo img{
-  height: 72px;
-  width: auto;
+  height:72px;
+  width:auto;
   display:block;
 }
 
 .nav-links{
   display:flex;
   flex-wrap:wrap;
-  gap: 10px;
+  gap:10px;
 }
 
 .nav-links a{
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.03);
-  color: var(--text);
-  font-weight: 650;
-  font-size: 14px;
-  transition: transform .12s ease, background .12s ease, border-color .12s ease;
-  text-decoration: none;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  color:var(--text);
+  font-weight:650;
+  font-size:14px;
+  text-decoration:none;
 }
 
 .nav-links a:hover{
-  transform: translateY(-1px);
-  border-color: rgba(255,42,79,.55);
-  background: rgba(255,42,79,.12);
+  border-color:rgba(255,42,79,.55);
+  background:rgba(255,42,79,.12);
 }
 
 .nav-links a.active{
-  border-color: rgba(255,42,79,.85);
-  background: rgba(255,42,79,.18);
+  border-color:rgba(255,42,79,.85);
+  background:rgba(255,42,79,.18);
 }
 
 /* =========================
    Cards
    ========================= */
 .card{
-  background: rgba(17,24,39,.92);
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  box-shadow: var(--shadow);
-  padding: 18px;
-
-  /* Centered default card sizing */
-  width: 100%;
-  max-width: 900px;
-  margin: 18px auto;
+  background:rgba(17,24,39,.92);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  padding:18px;
+  width:100%;
+  max-width:900px;
+  margin:18px auto;
 }
 
 /* =========================
-   Generic Grid helper
-   ========================= */
-.grid{
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-items: center;
-}
-
-/* Cards inside generic grids: cap width and let grid control spacing */
-.grid .card{
-  width: 100%;
-  max-width: 420px;
-  margin: 0;
-}
-
-/* =========================
-   Footer - strict sizing
+   Footer
    ========================= */
 footer{
-  border-top: 1px solid var(--line);
-  background: rgba(11,13,18,.85);
-  padding: 22px 18px;
-  text-align: center;
+  border-top:1px solid var(--line);
+  background:rgba(11,13,18,.85);
+  padding:22px 18px;
+  text-align:center;
   display:flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items:center;
-  gap: 12px;
-}
-
-footer .footer-top{
-  font-weight: 700;
+  gap:12px;
 }
 
 footer .footer-logos{
   display:flex;
   justify-content:center;
   align-items:center;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-wrap:wrap;
+  gap:16px;
 }
 
 footer .footer-logos img{
-  height: 80px;
-  width: auto;
-  max-height: 80px;
-  object-fit: contain;
+  height:80px;
+  width:auto;
+  object-fit:contain;
 }
 
 /* =========================
-   Forms (contact)
+   Onus Probandi Nav
    ========================= */
-form{ display:grid; gap: 12px; }
-label{ font-weight: 650; font-size: 14px; }
-
-input, textarea{
-  width:100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.16);
-  background: rgba(0,0,0,.22);
-  color: var(--text);
-}
-
-textarea{ min-height: 140px; }
-
-/* =========================
-   Film page: logo
-   ========================= */
-.film-logo{
-  max-height: 350px;
-  width: auto;
-  display: block;
-  margin: 30px auto;
-}
-
-/* =========================
-   Film page: synopsis beats cards grid
-   ========================= */
-.film-beats{
-  margin-top: 24px;
-}
-
-.film-beats-grid{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
-}
-
-/* Default: 2-up */
-.film-beats-grid .card{
-  grid-column: span 6;
-  width: 100%;
-  max-width: none; /* let the grid handle sizing */
-  margin: 0;
-}
-
-/* Small screens: 1-up */
-@media (max-width: 700px){
-  .film-beats-grid .card{
-    grid-column: span 12;
-  }
-}
-
-/* Large screens: 4-up */
-@media (min-width: 1100px){
-  .film-beats-grid .card{
-    grid-column: span 3;
-  }
-}
-
-.film-beats .card h3{
-  margin-top: 0;
-}
-
-/* =========================
-   Mobile
-   ========================= */
-@media (max-width: 860px){
-  header nav{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links{ width:100%; }
-}
-
-@media (max-width: 520px){
-  header nav .logo img{ height: 64px; }
-  footer .footer-logos img{ height: 22px; }
-}
-/* ===========================
-   Onus Probandi subsite nav
-   =========================== */
+.onus #siteHeader{ display:block; }
 
 .onus .onus-header{
-  border-bottom: 1px solid var(--line, rgba(255,255,255,.14));
-  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0));
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0));
 }
 
 .onus .onus-header .wrap{
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  max-width:1120px;
+  margin:0 auto;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  gap:18px;
 }
 
 .onus .brand img{
-  display: block;
-  height: auto;
+  display:block;
+  max-width:220px;
+  height:auto;
 }
 
 .onus .onus-nav{
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-end;
+  display:flex;
+  flex:1;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:flex-end;
 }
 
 .onus .onus-nav a{
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line, rgba(255,255,255,.14));
-  text-decoration: none;
-  color: var(--text, #e7eaf0);
-  font-weight: 600;
-  background: rgba(255,255,255,.04);
-  transition: background .2s ease, border-color .2s ease;
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+  background:rgba(255,255,255,.04);
 }
 
 .onus .onus-nav a:hover{
-  background: rgba(255,255,255,.08);
+  background:rgba(255,255,255,.08);
 }
 
 .onus .onus-nav a.is-active{
-  border-color: var(--accent, #ff2a4f);
-  background: rgba(255,42,79,.12);
+  border-color:var(--accent);
+  background:rgba(255,42,79,.12);
+}
+
+/* =========================
+   Onus Actors Cards
+   ========================= */
+.onus .actor-list{
+  display:grid;
+  gap:16px;
+  margin-top:18px;
+}
+
+.onus .actor{
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background:rgba(17,24,39,.92);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.onus .actor-inner{
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:16px;
+  padding:16px;
+  align-items:start;
+}
+
+.onus .actor-media{
+  margin:0;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.onus .actor-media img{
+  display:block;
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.onus .actor-role{
+  margin:0 0 10px 0;
+  color:var(--muted);
+}
+
+.onus .actor-bio p{
+  margin:0 0 12px 0;
+}
+
+@media (max-width:720px){
+  .onus .actor-inner{
+    grid-template-columns:1fr;
+  }
+  .onus .actor-media img{
+    height:280px;
+  }
 }

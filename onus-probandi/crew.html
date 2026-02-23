@@ -6,42 +6,57 @@
   <title>Crew | Onus Probandi | Webstreamedia</title>
   <meta name="description" content="Key creative team for Onus Probandi short film." />
 
-  <link rel="stylesheet" href="/style.css?v=6" />
+  <link rel="stylesheet" href="/style.css?v=7" />
 
   <style>
+    /* Onus-only sizing (scoped) */
     body.onus img{ max-width:100%; height:auto; }
 
-    body.onus .crew-grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:18px;
-    }
-    @media (max-width: 860px){
-      body.onus .crew-grid{ grid-template-columns: 1fr; }
-    }
+    /* Crew layout */
+    body.onus .crew-stack{ display:grid; gap:18px; }
 
     body.onus .crew-card{
       display:grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 180px 1fr;
       gap:16px;
       align-items:start;
     }
-    @media (max-width: 520px){
+
+    @media (max-width: 640px){
       body.onus .crew-card{ grid-template-columns: 1fr; }
     }
 
     body.onus .crew-photo img{
-      width:100%;
-      max-width:160px;
-      border-radius:14px;
       display:block;
+      width:100%;
+      max-width:180px;
+      margin:0 auto;
+      border-radius:14px;
+    }
+
+    body.onus .crew-photo .ph{
+      height:220px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:12px;
+      opacity:.85;
+      font-size:.95rem;
     }
 
     body.onus .crew-meta{
       opacity:.9;
       margin-top:6px;
       font-size:.95rem;
+      line-height:1.4;
     }
+
+    body.onus .bio p{ margin-top:10px; }
+    body.onus .bio p:first-of-type{ margin-top:0; }
   </style>
 </head>
 
@@ -55,7 +70,7 @@
       </a>
     </div>
 
-    <div class="nav-links">
+    <div class="nav-links" role="navigation" aria-label="Onus Probandi navigation">
       <a href="/onus-probandi/">Overview</a>
       <a href="/onus-probandi/concept.html">Concept</a>
       <a href="/onus-probandi/actors.html">Actors</a>
@@ -68,94 +83,111 @@
 
 <main class="wrap">
 
-<section class="panel">
-  <h1>Key Creative Team</h1>
-  <p class="lede">
-    Onus Probandi brings together experienced independent filmmakers with a strong track record in
-    character-driven storytelling and award-winning short form production.
-  </p>
-</section>
+  <section class="panel">
+    <h1>Key Crew</h1>
+    <p class="lede">
+      Onus Probandi brings together experienced creative professionals focused on grounded, character-driven storytelling
+      with a contemporary Australian edge.
+    </p>
+  </section>
 
-<section class="panel">
-  <h2>Writer</h2>
+  <section class="panel">
+    <h2>Writer</h2>
 
-  <article class="card crew-card">
-    <div class="crew-photo">
-      <img src="/assets/films/onus_probandi/chris.jpg" alt="Chris Beadnell headshot" loading="lazy" />
+    <div class="crew-stack">
+
+      <article class="card crew-card">
+        <div class="crew-photo">
+          <img src="/assets/films/onus_probandi/chris.webp" alt="Chris Beadnell headshot" loading="lazy" />
+        </div>
+
+        <div class="bio">
+          <h3>Chris Beadnell</h3>
+          <div class="crew-meta"><strong>Writer – Onus Probandi</strong></div>
+
+          <p>
+            Chris Beadnell is a filmmaker hailing from the Sunshine Coast, Queensland, Australia, on Gubbi Gubbi country.
+            With a decade of experience in scriptwriting, Chris has garnered numerous awards and accolades for his compelling screenplays.
+          </p>
+
+          <p>
+            A turning point in his career was witnessing his script <em>Cliff&apos;s Edge</em> being produced as a short film.
+            This experience ignited his passion for directing, leading him to undertake formal training and workshopping to direct his first short film,
+            <em>The Note</em>.
+          </p>
+
+          <p>
+            This debut film and its script achieved great success, winning multiple awards worldwide, including <strong>Best Screenplay</strong> at the
+            2024 International Film Festival of Australia and <strong>Best Male Director</strong> at the Power 24 Film Festival in South Africa.
+          </p>
+
+          <p>
+            Chris recently produced and directed <em>Bingo Man</em> (short film). Chris&apos;s work is characterized by a strong humanist philosophy,
+            deeply influenced by his years as a paramedic. This background allows him to explore the beauty, tragedy, and irony of life through his films.
+          </p>
+
+          <p>
+            He collaborates openly with actors and crew, sharing his cinematic vision while challenging them to bring their best to each role.
+            Chris draws inspiration from several renowned writer-directors, including Frank Darabont, Peter Weir, Christopher Nolan, and Quentin Tarantino.
+          </p>
+
+          <p>
+            He is an active member of the Sunshine Coast Screen Collective and other industry organizations, where he networks and supports local and emerging
+            film talent. Chris takes great pride in mentoring novice creatives, offering them their first opportunities in the industry while continuing his own
+            development journey.
+          </p>
+
+          <p>
+            Since his directorial debut, Chris has continued to direct and assist with other short films while maintaining his passion for writing. Chris has
+            recently completed writing his first feature film, <em>Bingo Man</em> (an expansion of the short film) and plans to also write this in the limited
+            series format.
+          </p>
+
+          <p>
+            Chris remains open to any filmmaking offers or challenges, always eager to expand his creative horizons.
+          </p>
+        </div>
+      </article>
+
     </div>
+  </section>
 
-    <div>
-      <h3>Chris Beadnell</h3>
-      <div class="crew-meta"><strong>Writer – Onus Probandi</strong></div>
+  <section class="panel">
+    <h2>Producer / Director</h2>
 
-      <p>
-        Chris Beadnell is an award-winning Australian filmmaker specialising in emotionally driven
-        narratives across thriller, drama, mystery, and dark comedy genres. His screenwriting work
-        has received more than 75 film festival awards across multiple short films and screenplays,
-        demonstrating strong international recognition.
-      </p>
+    <article class="card crew-card">
+      <div class="crew-photo">
+        <div class="ph">
+          Producer/Director headshot<br />
+          (optional)
+        </div>
+      </div>
 
-      <p>
-        His original short screenplay <em>Onus Probandi</em> has itself received multiple awards and
-        festival placements, reflecting its appeal across both narrative and screenplay competitions.
-        Chris previously collaborated with director Adrian Alback on the short film
-        <em>Cliff’s Edge</em> (2023), which achieved 15 award wins on the festival circuit.
-      </p>
+      <div class="bio">
+        <h3>Adrian Alback</h3>
+        <div class="crew-meta"><strong>Producer / Director – Onus Probandi</strong></div>
 
-      <p>
-        In 2024, his short film <em>The Note</em> won Best Screenplay at the International Film Festival
-        Australia (IFFA) and Best Male Director at the Power24 International Film Festival in Durban.
-        His 2025 feature adaptation of <em>Bingo Man</em> received Best Feature Screenplay at the
-        Melbourne International Film Festival.
-      </p>
+        <p>
+          Adrian Alback is an Australian broadcast and online production specialist with extensive experience across live television,
+          livestreaming, and independent film production. He leads Webstreamedia and develops narrative and documentary projects for
+          festival and digital release.
+        </p>
 
-      <p>
-        Chris specialises in character-driven storytelling that explores emotional vulnerability
-        within suspenseful narrative frameworks, often working within micro-budget production
-        environments while maximising creative impact.
-      </p>
-    </div>
-  </article>
+        <p>
+          Adrian&apos;s work combines cinematic storytelling with broadcast-grade technical delivery, supporting efficient production workflows,
+          reliable on-set capture, and polished post pathways.
+        </p>
+      </div>
+    </article>
 
-</section>
-
-<section class="panel">
-  <h2>Producer / Director</h2>
-
-  <article class="card crew-card">
-    <div>
-      <h3>Adrian Alback</h3>
-      <div class="crew-meta"><strong>Producer / Director – Onus Probandi</strong></div>
-
-      <p>
-        Adrian Alback is an Australian broadcast and online production specialist with extensive
-        experience across live television, livestreaming, and independent film production.
-        His previous directing credit <em>Cliff’s Edge</em> (2023) received 15 international
-        festival awards.
-      </p>
-
-      <p>
-        Adrian’s background in broadcast audio engineering and multi-camera production includes
-        roles with Reuters Television (Tokyo), Channel Nine Brisbane, Global Television Sydney,
-        and Channel Seven Brisbane. He holds AFTRS AD certification and specialises in
-        multi-platform production workflows bridging broadcast and digital delivery.
-      </p>
-
-      <p>
-        Current projects include the feature documentary <em>Blue Hermit</em> (2026) and the
-        technology-focused documentary <em>Let’s Not Google Meet</em>.
-      </p>
-    </div>
-  </article>
-
-</section>
+  </section>
 
 </main>
 
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-left">© <span id="y"></span> Webstreamedia</div>
-    <div class="footer-logos">
+    <div class="footer-logos" aria-label="Footer logos">
       <img src="/assets/IMDbPro.png" alt="IMDb" loading="lazy" />
     </div>
   </div>

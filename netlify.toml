@@ -39,3 +39,7 @@
   from = "/onus-probandi/overview"
   to = "/onus-probandi/index.html"
   status = 301
+[[redirects]]
+from = "/lets-not-google-meet"
+to = "/news"
+status = 301

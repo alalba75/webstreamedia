@@ -169,6 +169,10 @@ header nav .logo img{
 /* =========================
    Footer (centered)
    ========================= */
+/* =========================
+   Footer
+   ========================= */
+
 footer{
   border-top:1px solid var(--line);
   background:rgba(11,13,18,.85);
@@ -176,25 +180,25 @@ footer{
   text-align:center;
 
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
+  justify-content:center;
   align-items:center;
-  gap:12px;
+  flex-wrap:wrap;
+  gap:18px;
 }
 
 footer .footer-logos{
   display:flex;
-  justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
-  gap:16px;
+  justify-content:center;
+  gap:18px;
 }
 
 footer .footer-logos img{
-  height:28px;
+  height:80px;
   width:auto;
   object-fit:contain;
 }
-
 /* =========================
    Onus Probandi Nav (scoped)
    ========================= */

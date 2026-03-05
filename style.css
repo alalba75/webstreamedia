@@ -309,3 +309,12 @@ footer .footer-logos img{
     height:280px;
   }
 }
+}
+/* Film logos inside news cards */
+.card .film-logo{
+  max-width:240px;
+  width:50%;
+  height:auto;
+  display:block;
+  margin:12px auto 16px;
+}

@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Concept | Onus Probandi Crime Thriller Film</title>
+  <meta name="description" content="Onus Probandi concept page - tone, themes, synopsis, approach, and investor-friendly positioning for a Queensland crime thriller short film." />
 
-<meta name="description" content="Onus Probandi concept page - tone, themes, synopsis, approach, and investor-friendly positioning for a Queensland crime thriller short film." />
+  <link rel="stylesheet" href="/style.css?v=10" />
 
-  <!-- your site CSS -->
-  <link rel="stylesheet" href="/style.css?v=3" />
-
-  <!-- Onus-only image sizing (scoped) -->
   <style>
     body.onus img{ max-width:100%; height:auto; }
+
     body.onus .poster img{
       display:block;
       width:100%;
@@ -21,6 +19,7 @@
       margin:0 auto;
       border-radius:14px;
     }
+
     body.onus .thumb img{
       display:block;
       width:100%;
@@ -28,6 +27,7 @@
       margin:0 auto;
       border-radius:14px;
     }
+
     body.onus .thumb figcaption,
     body.onus .poster figcaption{
       margin-top:8px;
@@ -40,7 +40,23 @@
 
 <body class="onus" data-page="concept">
 
-  <div id="siteHeader"></div>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/" aria-label="Webstreamedia home">
+          <img src="/assets/logo.png" alt="Webstreamedia" />
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <a href="/onus-probandi/">Overview</a>
+        <a class="is-active" href="/onus-probandi/concept.html">Concept</a>
+        <a href="/onus-probandi/roles.html">Roles</a>
+        <a href="/onus-probandi/crew.html">Crew Bio</a>
+        <a href="/onus-probandi/signup.html">Signup/Contact</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="wrap">
 
@@ -228,9 +244,9 @@
       </div>
 
       <p>
-        The supporting authority figure(s) serve as pressure valves. They are not evil; they represent how systems behave under scrutiny: reduce risk,
-        reduce uncertainty, control the narrative. This allows the film to keep its realism and avoid simplistic moral binaries. The antagonistic force is
-        not only one person; it is the collision between human urgency and institutional standards.
+        The supporting authority figures are not villains; they represent how systems behave under scrutiny: reduce risk, reduce uncertainty,
+        control the narrative. This allows the film to keep its realism and avoid simplistic moral binaries. The antagonistic force is not only
+        one person; it is the collision between human urgency and institutional standards.
       </p>
     </section>
 
@@ -256,19 +272,32 @@
       </ul>
     </section>
 
-
     <section class="panel">
       <h2>Next steps</h2>
       <p>
         This concept page is the public-facing entry point. If you are an investor, sponsor, or partner and you want the full package - budget outline,
-        schedule, deliverables, and the marketing/festival roadmap - use the navigation above to reach <strong>Involvers</strong> and <strong>Signup/Contact</strong>.
-        We can provide the deeper pack under appropriate confidentiality where needed.
+        schedule, deliverables, and production information - use the navigation above to reach <strong>Roles</strong>, <strong>Crew Bio</strong>,
+        and <strong>Signup/Contact</strong>. We can provide deeper materials under appropriate confidentiality where needed.
       </p>
     </section>
 
   </main>
 
-  <div id="siteFooter"></div>
-  <script defer src="assets/onus-shell.js"></script>
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-left">© <span id="y"></span> Webstreamedia</div>
+      <div class="footer-logos">
+        <img src="/assets/IMDbPro.png" alt="IMDb" loading="lazy" />
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var y = document.getElementById("y");
+      if (y) y.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+
 </body>
 </html>

@@ -1,53 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://webstreamedia.com.au/</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://webstreamedia.com.au/</loc>
+</url>
 
-  <url>
-    <loc>https://webstreamedia.com.au/work.html</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://webstreamedia.com.au/onus-probandi/</loc>
+</url>
 
-  <url>
-    <loc>https://webstreamedia.com.au/news.html</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url>
+<loc>https://webstreamedia.com.au/onus-probandi/concept.html</loc>
+</url>
 
-  <url>
-    <loc>https://webstreamedia.com.au/services.html</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url>
+<loc>https://webstreamedia.com.au/onus-probandi/roles.html</loc>
+</url>
 
-  <url>
-    <loc>https://webstreamedia.com.au/credits.html</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://webstreamedia.com.au/onus-probandi/crew.html</loc>
+</url>
 
-  <url>
-    <loc>https://webstreamedia.com.au/about.html</loc>
-    <lastmod>2026-01-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://webstreamedia.com.au/contact.html</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://webstreamedia.com.au/onus-probandi/signup.html</loc>
+</url>
 
 </urlset>

@@ -2,9 +2,34 @@
   publish = "."
 
 # ---------------------------
+# Retired pages: 301 redirects
+# Services and Work pages have been retired in the November 2026 rebuild.
+# Redirect any inbound links to sensible replacements so we don't lose
+# referrer traffic or trigger 404s for cached search results.
+# ---------------------------
+[[redirects]]
+  from = "/services"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/services.html"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/work"
+  to = "/credits.html"
+  status = 301
+
+[[redirects]]
+  from = "/work.html"
+  to = "/credits.html"
+  status = 301
+
+# ---------------------------
 # Onus Probandi pretty URLs
 # ---------------------------
-
 [[redirects]]
   from = "/onus-probandi/actors"
   to = "/onus-probandi/actors.html"
@@ -39,7 +64,8 @@
   from = "/onus-probandi/overview"
   to = "/onus-probandi/index.html"
   status = 301
+
 [[redirects]]
-from = "/lets-not-google-meet"
-to = "/news"
-status = 301
+  from = "/lets-not-google-meet"
+  to = "/news"
+  status = 301

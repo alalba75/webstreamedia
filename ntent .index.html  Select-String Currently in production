@@ -1,0 +1,116 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/index.html b/index.html[m
+[1mindex f867dd3..7c1fe7b 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -1,18 +1,23 @@[m
+[31m-﻿<!-- =========================[m
+[31m-     index.html (COMPLETED)[m
+[31m-     ========================= -->[m
+[32m+[m[32m<!-- =========================[m
+[32m+[m[32m  index.html  (rebuilt)[m
+[32m+[m[32m  Webstreamedia homepage[m
+[32m+[m[32m  - Repositioned as production company[m
+[32m+[m[32m  - Current slate front and centre[m
+[32m+[m[32m  - Nav: Home / About / Credits / News / Contact[m
+[32m+[m[32m  - Services and Work pages retired[m
+[32m+[m[32m========================= -->[m
+ <!doctype html>[m
+[31m-<html lang="en">[m
+[32m+[m[32m<html lang="en-AU">[m
+ <head>[m
+   <meta charset="utf-8">[m
+[31m-  <title>Webstreamedia | Production, Post & Livestreaming</title>[m
+[32m+[m[32m  <title>Webstreamedia | Australian Production Company | Brisbane</title>[m
+   <meta name="viewport" content="width=device-width, initial-scale=1">[m
+[31m-  <meta name="description" content="Webstreamedia &mdash; production, post-production and livestreaming services across Australia.">[m
+[32m+[m[32m  <meta name="description" content="Webstreamedia is a Brisbane-based Australian production company. Three and a half decades of credits across Australian and international television, sound, and long-form film. Currently in production on Blue Hermit and Onus Probandi.">[m
+   <link rel="canonical" href="https://webstreamedia.com.au/">[m
+   <link rel="stylesheet" href="style.css">[m
+ </head>[m
+[31m-[m
+ <body>[m
+[32m+[m
+ <header>[m
+   <nav>[m
+     <div class="logo">[m
+[36m@@ -20,48 +25,54 @@[m
+         <img src="assets/logo.png" alt="Webstreamedia logo">[m
+       </a>[m
+     </div>[m
+[31m-[m
+     <div class="nav-links">[m
+[31m-      <a href="work.html">Work</a>[m
+[31m-      <a href="news.html">News</a>[m
+[31m-      <a href="credits.html">Credits</a>[m
+[32m+[m[32m      <a class="active" href="index.html">Home</a>[m
+       <a href="about.html">About</a>[m
+[31m-      <a href="services.html">Services</a>[m
+[31m-      <a class="active" href="contact.html">Contact</a>[m
+[32m+[m[32m      <a href="credits.html">Credits</a>[m
+[32m+[m[32m      <a href="news.html">News</a>[m
+[32m+[m[32m      <a href="contact.html">Contact</a>[m
+     </div>[m
+   </nav>[m
+ </header>[m
+ [m
+ <main>[m
+   <h1>Webstreamedia</h1>[m
+[31m-  <p class="muted">Production, post, audio and livestreaming &mdash; built for real-world delivery.</p>[m
+[32m+[m[32m  <p class="muted">Australian production. Brisbane.</p>[m
+ [m
+   <section class="card">[m
+[31m-    <h2>What we do</h2>[m
+[31m-    <div class="grid two">[m
+[31m-      <div>[m
+[31m-        <p><strong>Production</strong> &mdash; lean crews, location-ready workflows, and practical on-set decision making.</p>[m
+[31m-        <p><strong>Post</strong> &mdash; editorial, finishing, audio, and delivery packaging that holds up under scrutiny.</p>[m
+[31m-      </div>[m
+[31m-      <div>[m
+[31m-        <p><strong>Livestreaming</strong> &mdash; reliable switching, audio, recording and redundancy for broadcast-style outcomes.</p>[m
+[31m-        <p><strong>Consulting</strong> &mdash; workflow design, technical planning and build-outs for teams that need clarity.</p>[m
+[31m-      </div>[m
+[31m-    </div>[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m      A Queensland-registered production company developing long-form Australian content for theatrical, streaming and broadcast release.[m
+[32m+[m[32m    </p>[m
+[32m+[m[32m    <p class="muted">[m
+[32m+[m[32m      Principal: Adrian Alback &mdash; director, producer and senior broadcast professional with three and a half decades of credits across Australian and international television.[m
+[32m+[m[32m    </p>[m
+[32m+[m[32m  </section>[m
+[32m+[m
+[32m+[m[32m  <section class="card">[m
+[32m+[m[32m    <h2>Currently in production</h2>[m
+[32m+[m
+[32m+[m[32m    <h3 style="margin-top:18px;"><em>Blue Hermit</em></h3>[m
+[32m+[m[32m    <p class="muted" style="margin-top:0;">Feature documentary &mdash; Super 16mm origination, 4K HD finish</p>[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m      A documentary portrait of Brisbane jazz pianist and composer Dr Jeff Usher, whose 2019 PhD in music composition (University of Queensland) examined improvisation as a method of composition. Director and producer: Adrian Alback.[m
+[32m+[m[32m    </p>[m
+[32m+[m
+[32m+[m[32m    <h3 style="margin-top:24px;"><em>Onus Probandi</em></h3>[m
+[32m+[m[32m    <p class="muted" style="margin-top:0;">Short, crime mystery</p>[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m      Currently shooting. Director: Adrian Alback. Writer: Chris Beadnell.[m
+[32m+[m[32m    </p>[m
+   </section>[m
+ [m
+   <section class="card">[m
+[31m-    <h2>Latest</h2>[m
+[31m-    <p>See recent updates in <a class="btn" href="news.html">News</a></p>[m
+[32m+[m[32m    <h2>Recent and selected work</h2>[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m      A full record of director, producer, sound, and broadcast credits across film and television, 1989 &ndash; present, is available on the <a href="credits.html">Credits</a> page.[m
+[32m+[m[32m    </p>[m
+   </section>[m
+ </main>[m
+ [m
+ <div id="site-footer"></div>[m
+[31m-[m
+ <script src="script.js"></script>[m
+[31m-[m
+ </body>[m
+ </html>[m
+[31m-[m
+[31m-[m
+[31m-[m

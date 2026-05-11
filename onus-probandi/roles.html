@@ -25,41 +25,12 @@
 
 <style>
 body.onus img{max-width:100%;height:auto;}
-
-body.onus .role-grid{
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:18px;
-}
-
-@media (max-width:860px){
-body.onus .role-grid{grid-template-columns:1fr;}
-}
-
-body.onus .role-card{
-display:grid;
-grid-template-columns:140px 1fr;
-gap:16px;
-align-items:start;
-}
-
-@media (max-width:520px){
-body.onus .role-card{grid-template-columns:1fr;}
-}
-
-body.onus .role-photo img{
-width:100%;
-max-width:140px;
-border-radius:14px;
-display:block;
-}
-
-body.onus .role-meta{
-opacity:.9;
-margin-top:6px;
-font-size:.95rem;
-}
-
+body.onus .role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+@media (max-width:860px){body.onus .role-grid{grid-template-columns:1fr;}}
+body.onus .role-card{display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:start;}
+@media (max-width:520px){body.onus .role-card{grid-template-columns:1fr;}}
+body.onus .role-photo img{width:100%;max-width:140px;border-radius:14px;display:block;}
+body.onus .role-meta{opacity:.9;margin-top:6px;font-size:.95rem;}
 </style>
 
 </head>
@@ -68,21 +39,19 @@ font-size:.95rem;
 
 <header>
 <nav>
-
 <div class="logo">
 <a href="/" aria-label="Webstreamedia home">
 <img src="/assets/logo.png" alt="Webstreamedia" />
 </a>
 </div>
-
 <div class="nav-links">
 <a href="/onus-probandi/">Overview</a>
 <a href="/onus-probandi/concept.html">Concept</a>
-<a href="/onus-probandi/roles.html">Roles</a>
+<a class="is-active" href="/onus-probandi/roles.html">Roles</a>
 <a href="/onus-probandi/crew.html">Crew Bio</a>
-<a href="/onus-probandi/signup.html">Signup/Contact</a>
+<a href="/onus-probandi/production.html">Production</a>
+<a href="/onus-probandi/contact.html">Contact</a>
 </div>
-
 </nav>
 </header>
 
@@ -90,126 +59,72 @@ font-size:.95rem;
 
 <section class="panel">
 <h1>Cast &amp; Roles</h1>
-
 <p class="lede">
 Onus Probandi is a Queensland-set crime thriller short film.
 Below are the principal characters attached to the project.
 </p>
-
 </section>
 
 <section class="panel">
-
 <h2>Principal Characters</h2>
-
 <div class="role-grid">
 
 <article class="card role-card">
-
 <div class="role-photo">
 <img src="/assets/films/onus_probandi/michael.jpg" alt="Michael Coward headshot" loading="lazy" />
 </div>
-
 <div>
 <h3>Detective Daniel Bouric</h3>
-
-<div class="role-meta">
-Portrayed by Michael Coward
-</div>
-
-<p>
-Michael has been acting for several years, working across multiple genres which has given him
-the chance to expand his skill and experience. He always does his best to add to the film
-in and out of scenes while focusing on the direction, and loves working with everyone in
-the industry.
-</p>
-
+<div class="role-meta">Portrayed by Michael Coward</div>
+<p>Michael has been acting for several years, working across multiple genres which has given him the chance to expand his skill and experience. He always does his best to add to the film in and out of scenes while focusing on the direction, and loves working with everyone in the industry.</p>
 </div>
 </article>
 
 <article class="card role-card">
-
 <div class="role-photo">
 <img src="/assets/films/onus_probandi/anastasia.jpeg" alt="Anastasia O'Brien headshot" loading="lazy" />
 </div>
-
 <div>
 <h3>Detective Elise Watts</h3>
-
-<div class="role-meta">
-Portrayed by Anastasia O'Brien
-</div>
-
-<p>
-Anastasia is a professional actress. Trained at University College Cork, Ireland, with a Master's in Theatre and Performative Practices, she has worked across both stage and screen throughout Ireland. Since returning to Brisbane, Anastasia has continued to develop her craft through ongoing training while contributing to a range of short films and feature projects.
-She is currently looking forward to stepping into the role of Detective Elise Watts.
-</p>
-
+<div class="role-meta">Portrayed by Anastasia O'Brien</div>
+<p>Anastasia is a professional actress. Trained at University College Cork, Ireland, with a Master's in Theatre and Performative Practices, she has worked across both stage and screen throughout Ireland. Since returning to Brisbane, Anastasia has continued to develop her craft through ongoing training while contributing to a range of short films and feature projects. She is currently looking forward to stepping into the role of Detective Elise Watts.</p>
 </div>
 </article>
 
 <article class="card role-card">
-
 <div class="role-photo">
 <img src="/assets/films/onus_probandi/denis.png" alt="Denis Lwowski headshot" loading="lazy" />
 </div>
-
 <div>
 <h3>Mike</h3>
-
-<div class="role-meta">
-Portrayed by Denis Lwowski
-</div>
-
-<p>
-A quietly manipulative character operating within the ambiguity of evidence and perception,
-testing the limits of certainty in the investigation.
-</p>
-
+<div class="role-meta">Portrayed by Denis Lwowski</div>
+<p>A quietly manipulative character operating within the ambiguity of evidence and perception, testing the limits of certainty in the investigation.</p>
 </div>
 </article>
 
 <article class="card role-card">
-
 <div class="role-photo">
 <img src="/assets/films/onus_probandi/russ.png" alt="Russ Gallagher headshot" loading="lazy" />
 </div>
-
 <div>
 <h3>Senior Inspector Gerard Mackay</h3>
-
-<div class="role-meta">
-Portrayed by Russ Gallagher
-</div>
-
-<p>
-A senior officer balancing political pressure, departmental accountability, and the pursuit of a
-definitive case outcome.
-</p>
-
+<div class="role-meta">Portrayed by Russ Gallagher</div>
+<p>A senior officer balancing political pressure, departmental accountability, and the pursuit of a definitive case outcome.</p>
 </div>
 </article>
 
 </div>
-
 </section>
 
 </main>
 
 <footer>
-
 <div class="wrap footer-inner">
-
-<div class="footer-left">
-© <span id="y"></span> Webstreamedia
-</div>
-
+<div class="footer-left">© <span id="y"></span> Webstreamedia</div>
 <div class="footer-logos">
 <img src="/assets/IMDbPro.png" alt="IMDb" loading="lazy" />
 </div>
-
 </div>
-
 </footer>
 
 <script>

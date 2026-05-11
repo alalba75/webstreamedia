@@ -14,9 +14,15 @@
 
     body.onus .still-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       margin: 24px 0;
+    }
+
+    @media (max-width: 640px) {
+      body.onus .still-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     body.onus .still-grid figure {
@@ -34,19 +40,6 @@
       font-size: 0.85rem;
       opacity: .75;
       text-align: center;
-    }
-
-    body.onus .still-grid-wide {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin: 24px 0;
-    }
-
-    body.onus .still-grid-wide img {
-      display: block;
-      width: 100%;
-      border-radius: 10px;
     }
   </style>
 </head>
@@ -114,12 +107,6 @@
         <img src="assets/films/onus_probandi/Denis 1.jpg"
              alt="Denis Lwowski as Mike" loading="lazy" />
         <figcaption>Denis Lwowski as Mike</figcaption>
-      </figure>
-
-      <figure>
-        <img src="assets/films/onus_probandi/elise single cu.jpg"
-             alt="Anastasia O'Brien as Detective Elise Watts" loading="lazy" />
-        <figcaption>Anastasia O&apos;Brien as Detective Elise Watts</figcaption>
       </figure>
 
       <figure>

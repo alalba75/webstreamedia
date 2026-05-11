@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Onus Probandi — Signup / Contact</title>
+  <meta name="description" content="Signup and contact for Onus Probandi (Webstreamedia subsite)." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="onus">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared injected header -->
+  <div id="siteHeader"></div>
+
+  <main id="main" class="onus-main">
+    <section class="wrap">
+      <h1>Signup / Contact</h1>
+      <p class="lede">
+        If you’d like to be kept in the loop (casting calls, production updates, screenings),
+        drop your details below.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>Contact</h2>
+
+          <p>
+            Email: <a href="mailto:admin@webstreamedia.com?subject=Onus%20Probandi%20Inquiry">admin@webstreamedia.com</a>
+          </p>
+
+          <hr class="rule" />
+
+          <h3>Signup (placeholder)</h3>
+          <p class="fineprint">
+            This form is a placeholder for now. Use the email link above for all inquiries.
+          </p>
+
+          <form class="form" method="post" action="#" onsubmit="return false;">
+            <label>
+              Name
+              <input name="name" autocomplete="name" />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" />
+            </label>
+
+            <label>
+              Message (optional)
+              <textarea name="message" rows="4" placeholder="Tell us how you’d like to be involved"></textarea>
+            </label>
+
+            <button type="submit" class="btn" disabled aria-disabled="true">Submit (disabled)</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>How you can help</h2>
+          <ul class="bullets">
+            <li>Be an early viewer / feedback reader</li>
+            <li>Connect us with legal / court consultants</li>
+            <li>Help locate Brisbane-based locations</li>
+            <li>Spread the word (and keep it indie)</li>
+          </ul>
+
+          <hr class="rule" />
+
+          <h3>Links</h3>
+          <ul class="bullets">
+            <li><a href="../news.html">Webstreamedia News</a></li>
+            <li><a href="../credits.html">Credits</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared injected footer -->
+  <div id="siteFooter"></div>
+
+  <script defer src="assets/onus-shell.js"></script>
+</body>
+</html>
